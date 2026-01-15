@@ -15,7 +15,7 @@ const stats = [
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -23,8 +23,27 @@ export function HeroSection() {
           alt="Commercial roofing installation by Primer Group"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-10" style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }} />
       </div>
+
+      {/* Floating glass elements */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-accent/20 blur-3xl"
+      />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.7, duration: 1 }}
+        className="absolute bottom-1/3 right-[25%] w-48 h-48 rounded-full bg-accent/10 blur-3xl"
+      />
 
       {/* Content */}
       <div className="relative container-wide py-20 lg:py-32">
@@ -34,7 +53,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-block px-4 py-2 bg-accent/20 text-accent rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-4 py-2 glass-dark text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30">
               Commercial Roofers Southport
             </span>
           </motion.div>
@@ -43,7 +62,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-display-sm xl:text-display font-extrabold text-white leading-none mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] mb-6"
           >
             PRECISION<br />
             <span className="text-gradient">COMMERCIAL</span><br />
@@ -54,7 +73,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/80 mb-8 max-w-lg"
+            className="text-lg md:text-xl text-white/70 mb-8 max-w-lg"
           >
             Southport's trusted industrial roofing specialists. Delivering exceptional 
             quality and reliability across Merseyside since 2009.
@@ -84,18 +103,18 @@ export function HeroSection() {
             </Button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Stats with glass effect */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-3 gap-6"
+            className="glass-dark p-6 rounded-2xl inline-flex gap-8 md:gap-12"
           >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center sm:text-left">
-                <stat.icon className="w-5 h-5 text-accent mb-2 mx-auto sm:mx-0" />
+              <div key={index} className="text-center">
+                <stat.icon className="w-5 h-5 text-accent mb-2 mx-auto" />
                 <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-white/60">{stat.label}</div>
+                <div className="text-xs md:text-sm text-white/50">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -109,11 +128,11 @@ export function HeroSection() {
         transition={{ delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block"
       >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-2">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-2 backdrop-blur-sm">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-accent rounded-full"
+            className="w-1.5 h-1.5 bg-accent rounded-full glow-accent"
           />
         </div>
       </motion.div>
