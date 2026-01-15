@@ -35,8 +35,14 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section className="section-padding bg-primary">
-      <div className="container-wide">
+    <section className="section-padding bg-primary relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container-wide relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,7 +54,7 @@ export function ProjectsSection() {
             <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
               Featured Projects
             </span>
-            <h2 className="text-heading text-primary-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
               Delivering Excellence Across Merseyside
             </h2>
           </div>
@@ -69,36 +75,39 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-xl aspect-[4/5]"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/5]"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+              
+              {/* Glass overlay on hover */}
+              <div className="absolute inset-0 backdrop-blur-[2px] bg-accent/0 group-hover:bg-accent/10 transition-all duration-500" />
               
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block px-3 py-1 bg-accent text-accent-foreground text-xs font-semibold rounded-full mb-3">
+                <span className="inline-block px-3 py-1 backdrop-blur-md bg-accent/90 text-primary text-xs font-semibold rounded-full mb-3 glow-accent">
                   {project.category}
                 </span>
                 <h3 className="text-xl font-bold text-white mb-2">
                   {project.title}
                 </h3>
-                <div className="flex items-center gap-4 text-white/70 text-sm">
+                <div className="flex items-center gap-4 text-white/60 text-sm">
                   <span>{project.size}</span>
-                  <span>•</span>
+                  <span className="w-1 h-1 bg-white/40 rounded-full" />
                   <span>{project.location}</span>
                 </div>
               </div>
 
-              {/* Hover Overlay */}
+              {/* Hover Button */}
               <Link
                 to={`/projects/${project.id}`}
-                className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
               >
-                <span className="px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg transform -translate-y-4 group-hover:translate-y-0 transition-transform">
+                <span className="px-6 py-3 backdrop-blur-xl bg-accent text-primary font-semibold rounded-xl transform translate-y-4 group-hover:translate-y-0 transition-transform glow-accent-strong">
                   View Project
                 </span>
               </Link>

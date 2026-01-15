@@ -8,19 +8,16 @@ const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial
 
 export function CTASection() {
   return (
-    <section className="py-20 bg-accent relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 20px,
-            currentColor 20px,
-            currentColor 21px
-          )`,
-        }} />
-      </div>
+    <section className="py-24 bg-gradient-to-br from-accent via-accent to-cyan-400 relative overflow-hidden">
+      {/* Glass orbs */}
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+      
+      {/* Grid pattern */}
+      <div className="absolute inset-0 opacity-10" style={{
+        backgroundImage: `linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)`,
+        backgroundSize: '40px 40px'
+      }} />
 
       <div className="container-wide relative">
         <motion.div
@@ -29,10 +26,10 @@ export function CTASection() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-foreground mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-lg text-white/80 mb-10">
+          <p className="text-lg text-primary/70 mb-10">
             Get a free, no-obligation quote within 24 hours. Our team is ready 
             to discuss your commercial roofing needs.
           </p>
@@ -40,7 +37,7 @@ export function CTASection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
               size="xl" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/30"
               asChild
             >
               <a
@@ -53,9 +50,9 @@ export function CTASection() {
               </a>
             </Button>
             <Button 
-              variant="heroOutline" 
+              variant="glass" 
               size="xl"
-              className="border-white/30 text-white hover:border-white hover:bg-white/10"
+              className="border-primary/30 text-primary hover:bg-primary/10"
               asChild
             >
               <Link to="/contact">
@@ -65,10 +62,10 @@ export function CTASection() {
             </Button>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-6 text-white/70">
-            <a href="tel:+441234567890" className="flex items-center gap-2 hover:text-white transition-colors">
+          <div className="mt-8 flex items-center justify-center gap-6">
+            <a href="tel:+441234567890" className="flex items-center gap-2 text-primary/70 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="text-sm">Or call: 01234 567 890</span>
+              <span className="text-sm font-medium">Or call: 01234 567 890</span>
             </a>
           </div>
         </motion.div>

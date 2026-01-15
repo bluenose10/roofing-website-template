@@ -43,8 +43,11 @@ const certifications = [
 
 export function TrustSection() {
   return (
-    <section className="section-padding bg-muted">
-      <div className="container-wide">
+    <section className="section-padding bg-muted relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2" />
+      
+      <div className="container-wide relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,8 +58,8 @@ export function TrustSection() {
           <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
             Why Choose Us
           </span>
-          <h2 className="text-heading text-foreground mb-6">
-            Trusted Commercial Roofing Experts
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Trusted Commercial <span className="text-gradient">Roofing Experts</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             We've built our reputation on quality workmanship, reliability, 
@@ -73,27 +76,30 @@ export function TrustSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="flex items-start gap-4"
+              className="group flex items-start gap-4 p-6 bg-background rounded-2xl border border-transparent hover:border-accent/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <feature.icon className="w-6 h-6 text-accent" />
+              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent group-hover:glow-accent transition-all duration-300">
+                <feature.icon className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground mb-1">{feature.title}</h3>
+                <h3 className="font-bold text-foreground mb-1 group-hover:text-accent transition-colors">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm">{feature.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Certifications */}
+        {/* Certifications - Glass Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-card border border-border rounded-2xl p-8 md:p-12"
+          className="bg-background border border-border rounded-3xl p-8 md:p-12 relative overflow-hidden"
         >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Accent glow */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+          
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-2">
                 Industry Accredited
@@ -102,11 +108,11 @@ export function TrustSection() {
                 Certified and approved by leading industry bodies
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3">
               {certifications.map((cert) => (
                 <span
                   key={cert}
-                  className="px-4 py-2 bg-secondary rounded-full text-sm font-medium text-secondary-foreground"
+                  className="px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-medium text-foreground hover:bg-accent hover:text-primary transition-all duration-300 cursor-default"
                 >
                   {cert}
                 </span>

@@ -20,16 +20,16 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-white/10">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-primary/80 border-b border-white/10">
       <nav className="container-wide flex items-center justify-between py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-accent rounded-md flex items-center justify-center">
+        <Link to="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center glow-accent group-hover:scale-105 transition-transform">
             <span className="text-accent-foreground font-bold text-xl">P</span>
           </div>
           <div className="text-primary-foreground">
             <span className="font-bold text-lg tracking-tight">PRIMER GROUP</span>
-            <span className="block text-xs text-white/60 tracking-widest">LTD</span>
+            <span className="block text-xs text-white/50 tracking-widest">LTD</span>
           </div>
         </Link>
 

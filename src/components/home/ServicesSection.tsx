@@ -57,8 +57,11 @@ const itemVariants = {
 
 export function ServicesSection() {
   return (
-    <section className="section-padding bg-background">
-      <div className="container-wide">
+    <section className="section-padding bg-background relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-accent/5 to-transparent rounded-full blur-3xl" />
+      
+      <div className="container-wide relative">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -69,8 +72,8 @@ export function ServicesSection() {
           <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
             Our Services
           </span>
-          <h2 className="text-heading text-foreground mb-6">
-            Expert Commercial Roofing Solutions
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+            Expert Commercial <span className="text-gradient">Roofing Solutions</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             From new installations to emergency repairs, we deliver comprehensive 
@@ -90,33 +93,38 @@ export function ServicesSection() {
             <motion.div
               key={service.number}
               variants={itemVariants}
-              className={`group relative bg-card border border-border rounded-xl p-8 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300 ${
+              className={`group relative bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-all duration-500 overflow-hidden ${
                 index === 0 ? "lg:row-span-2" : ""
               }`}
             >
-              <div className="flex items-start justify-between mb-6">
-                <span className="text-5xl font-bold text-muted/50 group-hover:text-accent/30 transition-colors">
-                  {service.number}
-                </span>
-                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all">
-                  <service.icon className="w-6 h-6 text-accent group-hover:text-accent-foreground transition-colors" />
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-accent/10 transition-all duration-500 rounded-2xl" />
+              
+              <div className="relative">
+                <div className="flex items-start justify-between mb-6">
+                  <span className="text-5xl font-bold text-muted/30 group-hover:text-accent/20 transition-colors">
+                    {service.number}
+                  </span>
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 group-hover:glow-accent transition-all duration-300">
+                    <service.icon className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
+                  </div>
                 </div>
+                
+                <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  {service.description}
+                </p>
+                
+                <Link
+                  to={service.href}
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:text-accent transition-colors"
+                >
+                  Learn more
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
               </div>
-              
-              <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {service.description}
-              </p>
-              
-              <Link
-                to={service.href}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:text-accent transition-colors"
-              >
-                Learn more
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
             </motion.div>
           ))}
         </motion.div>
