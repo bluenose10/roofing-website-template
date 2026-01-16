@@ -68,14 +68,16 @@ export function ServicesSection() {
           className="max-w-2xl mb-16"
         >
           <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-            Our Services
+            Commercial & Industrial Roofers Southport
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Expert Commercial Roofing Solutions
+            Trusted Commercial Roofing Contractors Serving Southport, Liverpool & Manchester
           </h2>
+          <p className="text-lg text-muted-foreground mb-4">
+            At Primer Group LTD, we deliver top-tier commercial and industrial roofing services designed to protect your business and maintain its professional appearance. Serving Southport and surrounding areas including Liverpool and Manchester, our proactive approach includes expert installation, scheduled maintenance, regular inspections, and prompt resolution of issues to extend your roof's lifespan while preventing costly repairs.
+          </p>
           <p className="text-lg text-muted-foreground">
-            From new installations to emergency repairs, we deliver comprehensive 
-            roofing services tailored to your commercial property needs.
+            Our skilled commercial and industrial roofing contractors provide a meticulous, efficient process that enhances durability, safety, and stunning curb appeal for your property.
           </p>
         </motion.div>
 
