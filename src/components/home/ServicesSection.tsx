@@ -93,12 +93,10 @@ export function ServicesSection() {
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className={`group relative bg-secondary/80 border-2 border-border/60 rounded-2xl p-8 hover:border-accent hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 overflow-hidden ${
+              className={`group relative bg-[#35383D] border-2 border-white/10 rounded-2xl p-8 hover:border-[#F3CD45] hover:shadow-xl transition-all duration-300 overflow-hidden ${
                 index === 0 ? "lg:row-span-2" : ""
               }`}
             >
-              {/* Hover glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/10 group-hover:to-accent/20 transition-all duration-500 rounded-2xl" />
               
               <div className="relative">
                 <div className="flex items-start justify-between mb-6">
