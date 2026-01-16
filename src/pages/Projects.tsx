@@ -39,7 +39,7 @@ const projects = [
     title: "Distribution Centre",
     category: "Flat Roof",
     size: "62,000 sq ft",
-    location: "Merseyside",
+    location: "Wirral",
     material: "TPO Single-Ply",
     duration: "8 weeks",
     description: "Large-scale flat roof installation with energy-efficient white membrane system.",
