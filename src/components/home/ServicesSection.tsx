@@ -65,7 +65,7 @@ export function ServicesSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mb-16"
+          className="text-center max-w-3xl mx-auto mb-16"
         >
           <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
             Commercial & Industrial Roofers Southport
