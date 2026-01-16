@@ -205,35 +205,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary via-primary to-primary relative overflow-hidden">
-        <div className="container-wide relative text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-              Need a Custom Solution?
-            </h2>
-            <p className="text-white/70 mb-8 max-w-xl mx-auto text-lg">
-              Every project is unique. Contact us to discuss your specific 
-              commercial roofing requirements.
-            </p>
-            <Button variant="cta" size="xl" asChild>
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Start a Conversation
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
     </Layout>
   );
 };
