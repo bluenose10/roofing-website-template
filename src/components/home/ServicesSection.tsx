@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Building2, Wrench, AlertTriangle, Search, Layers } from "lucide-react";
+import { ArrowUpRight, Building2, Wrench, AlertTriangle, Search, Layers, Droplets } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -37,6 +37,13 @@ const services = [
     title: "Roof Inspections & Surveys",
     description: "Comprehensive roof assessments using drone technology and thermal imaging.",
     href: "/services#inspections",
+  },
+  {
+    number: "06",
+    icon: Droplets,
+    title: "Gutter & Drainage Systems",
+    description: "Commercial gutter installation, drainage solutions, and preventative maintenance.",
+    href: "/services#gutters",
   },
 ];
 
@@ -95,9 +102,7 @@ export function ServicesSection() {
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className={`group relative bg-white border-2 border-border rounded-2xl p-8 hover:border-[#F3CD45] hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                index === 0 ? "lg:row-span-2" : ""
-              }`}
+              className="group relative bg-white border-2 border-border rounded-2xl p-8 hover:border-[#F3CD45] hover:shadow-xl transition-all duration-300 overflow-hidden"
             >
               
               <div className="relative">

@@ -68,6 +68,18 @@ const services = [
     ],
     timeline: "1-3 days",
   },
+  {
+    id: "gutters",
+    title: "Gutter & Drainage Systems",
+    description: "Professional gutter and drainage solutions for commercial properties. Proper water management is essential to protect your roof investment and building structure.",
+    features: [
+      "Commercial gutter installation",
+      "Drainage system design",
+      "Gutter cleaning & maintenance",
+      "Downspout installation & repair",
+    ],
+    timeline: "1-2 weeks",
+  },
 ];
 
 const containerVariants = {
