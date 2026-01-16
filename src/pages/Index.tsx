@@ -24,7 +24,7 @@ const Index = () => {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    name: "Commercial Roofing Southport",
+    name: "Commercial Roofers Southport",
     description:
       "Professional commercial and industrial roofing contractors Southport. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
     url: "https://id-preview--c25d345b-d615-44dc-b942-f9f22213b38c.lovable.app",
