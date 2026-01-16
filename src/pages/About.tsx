@@ -73,7 +73,7 @@ const About = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl p-8"
+              className="bg-transparent border-2 border-white/10 rounded-xl p-8"
             >
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-accent" />
@@ -90,7 +90,7 @@ const About = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card border border-border rounded-xl p-8"
+              className="bg-transparent border-2 border-white/10 rounded-xl p-8"
             >
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                 <Eye className="w-7 h-7 text-accent" />
@@ -140,7 +140,7 @@ const About = () => {
                   }`}
                 >
                   <div className={`flex-1 ${index % 2 === 0 ? "lg:text-right" : "lg:text-left"}`}>
-                    <div className="bg-card border border-border rounded-xl p-6">
+                    <div className="bg-transparent border-2 border-white/10 rounded-xl p-6">
                       <span className="text-accent font-bold text-2xl">{item.year}</span>
                       <h3 className="text-xl font-bold text-foreground mt-2 mb-2">{item.title}</h3>
                       <p className="text-muted-foreground">{item.description}</p>
@@ -241,7 +241,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-muted rounded-2xl p-8 md:p-12"
+            className="bg-transparent border-2 border-[#F3CD45] rounded-2xl p-8 md:p-12"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               <div className="flex items-center gap-4">
@@ -253,7 +253,7 @@ const About = () => {
               </div>
               <div className="flex flex-wrap justify-center gap-4">
                 {["NFRC Member", "CSCS Certified", "Safe Contractor", "CompetentRoofer"].map((cert) => (
-                  <div key={cert} className="flex items-center gap-2 px-4 py-2 bg-background rounded-lg">
+                  <div key={cert} className="flex items-center gap-2 px-4 py-2 bg-transparent border border-white/10 rounded-lg">
                     <CheckCircle className="w-4 h-4 text-accent" />
                     <span className="text-sm font-medium text-foreground">{cert}</span>
                   </div>

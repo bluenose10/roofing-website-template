@@ -147,7 +147,7 @@ const Projects = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl hover:shadow-accent/5 transition-all duration-300"
+                  className="group bg-transparent border-2 border-white/10 rounded-xl overflow-hidden hover:border-[#F3CD45] hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
