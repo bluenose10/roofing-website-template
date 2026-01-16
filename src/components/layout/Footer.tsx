@@ -23,8 +23,6 @@ const company = [
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-0 left-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       
       <div className="container-wide py-16 lg:py-20 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
