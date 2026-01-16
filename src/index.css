@@ -26,10 +26,10 @@
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 20% 12%;
 
-    /* Electric Cyan - Vibrant Accent */
-    --accent: 185 100% 50%;
-    --accent-foreground: 220 20% 10%;
-    --accent-glow: 185 100% 60%;
+    /* Emerald Green - Professional Accent */
+    --accent: 152 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 152 76% 50%;
 
     /* Muted */
     --muted: 220 14% 96%;
@@ -42,15 +42,15 @@
     /* Borders & Inputs */
     --border: 220 14% 90%;
     --input: 220 14% 90%;
-    --ring: 185 100% 50%;
+    --ring: 152 76% 36%;
 
     --radius: 0.75rem;
 
     /* Custom - Industrial */
     --charcoal: 220 20% 12%;
     --charcoal-light: 220 15% 18%;
-    --electric-cyan: 185 100% 50%;
-    --cyan-glow: 185 100% 65%;
+    --emerald: 152 76% 36%;
+    --emerald-glow: 152 76% 50%;
     --concrete: 220 14% 92%;
     --concrete-dark: 220 10% 75%;
 
@@ -62,12 +62,12 @@
     /* Sidebar */
     --sidebar-background: 220 20% 12%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 185 100% 50%;
-    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-primary: 152 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 15% 18%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 220 15% 22%;
-    --sidebar-ring: 185 100% 50%;
+    --sidebar-ring: 152 76% 36%;
   }
 
   .dark {
@@ -85,8 +85,8 @@
     --secondary: 220 15% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --accent: 185 100% 50%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 152 76% 40%;
+    --accent-foreground: 0 0% 100%;
 
     --muted: 220 15% 18%;
     --muted-foreground: 220 10% 65%;
@@ -96,7 +96,7 @@
 
     --border: 220 15% 20%;
     --input: 220 15% 20%;
-    --ring: 185 100% 50%;
+    --ring: 152 76% 40%;
 
     --glass-bg: 220 20% 12% / 0.8;
     --glass-border: 0 0% 100% / 0.1;
@@ -122,7 +122,7 @@
 @layer components {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(185 100% 50%), hsl(185 100% 70%));
+    background-image: linear-gradient(135deg, hsl(152 76% 36%), hsl(152 76% 55%));
   }
 
   .section-padding {
@@ -153,11 +153,11 @@
   }
 
   .glow-accent {
-    box-shadow: 0 0 20px hsla(185 100% 50% / 0.3), 0 0 40px hsla(185 100% 50% / 0.1);
+    box-shadow: 0 0 20px hsla(152 76% 36% / 0.4), 0 0 40px hsla(152 76% 36% / 0.15);
   }
 
   .glow-accent-strong {
-    box-shadow: 0 0 30px hsla(185 100% 50% / 0.5), 0 0 60px hsla(185 100% 50% / 0.2);
+    box-shadow: 0 0 30px hsla(152 76% 36% / 0.5), 0 0 60px hsla(152 76% 36% / 0.2);
   }
 }
 
@@ -207,10 +207,10 @@
 
   @keyframes glow {
     from {
-      box-shadow: 0 0 20px hsla(185 100% 50% / 0.3);
+      box-shadow: 0 0 20px hsla(152 76% 36% / 0.4);
     }
     to {
-      box-shadow: 0 0 30px hsla(185 100% 50% / 0.5), 0 0 60px hsla(185 100% 50% / 0.2);
+      box-shadow: 0 0 30px hsla(152 76% 36% / 0.5), 0 0 60px hsla(152 76% 36% / 0.2);
     }
   }
 }
