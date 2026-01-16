@@ -8,6 +8,16 @@ import { CTASection } from "@/components/home/CTASection";
 const Index = () => {
   return (
     <Layout>
+      {/* Hidden Netlify form for detection */}
+      <form hidden method="POST" name="contact" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="projectType" />
+        <textarea name="message"></textarea>
+      </form>
+      
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />
