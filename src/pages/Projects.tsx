@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { ArrowRight } from "lucide-react";
+import heroImage from "@/assets/hero-roofing.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -87,8 +88,13 @@ const Projects = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary pt-24 pb-16 lg:pt-32 lg:pb-24">
-        <div className="container-wide">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
+        </div>
+        
+        <div className="container-wide relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,7 +103,7 @@ const Projects = () => {
             <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
               Our Portfolio
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-display-sm font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Featured Projects
             </h1>
             <p className="text-lg text-white/80">

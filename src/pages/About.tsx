@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Target, Eye, Users, Award, Shield, Clock, CheckCircle } from "lucide-react";
+import heroImage from "@/assets/hero-roofing.jpg";
 
 const timeline = [
   { year: "2009", title: "Founded", description: "Primer Group established in Southport with a vision for quality commercial roofing." },
@@ -44,8 +45,13 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-primary pt-24 pb-16 lg:pt-32 lg:pb-24">
-        <div className="container-wide">
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
+        </div>
+        
+        <div className="container-wide relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +60,7 @@ const About = () => {
             <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
               About Us
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-display-sm font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Built on Quality, Driven by Excellence
             </h1>
             <p className="text-lg text-white/80">
