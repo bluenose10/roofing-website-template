@@ -27,7 +27,7 @@ const Index = () => {
     name: "Commercial Roofers Southport",
     description:
       "Commercial and industrial roofing contractors Southport. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
-    url: "https:primergroup.com",
+    url: "https://primergroup.co.uk",
     telephone: "+447838121592",
     areaServed: [
       { "@type": "City", name: "Liverpool" },
