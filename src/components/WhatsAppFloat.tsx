@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = "447000000000";
+const WHATSAPP_NUMBER = "447838121592";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
 
 export function WhatsAppFloat() {

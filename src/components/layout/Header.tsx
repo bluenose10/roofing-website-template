@@ -12,7 +12,7 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-const WHATSAPP_NUMBER = "447000000000"; // Replace with actual number
+const WHATSAPP_NUMBER = "447838121592";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
 
 export function Header() {
