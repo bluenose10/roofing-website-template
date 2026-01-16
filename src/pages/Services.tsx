@@ -138,7 +138,7 @@ const Services = () => {
               >
                 {/* Urgent badge */}
                 {service.urgent && (
-                  <div className="absolute top-0 right-0 bg-accent text-primary-foreground px-4 py-1 text-sm font-bold rounded-bl-xl">
+                  <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-1 text-sm font-bold rounded-bl-xl">
                     24/7 Available
                   </div>
                 )}
@@ -205,7 +205,7 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary via-primary to-emerald-900/50 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-primary via-primary to-amber-900/50 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-1/4 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
         
