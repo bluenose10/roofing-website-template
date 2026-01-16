@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://id-preview--c25d345b-d615-44dc-b942-f9f22213b38c.lovable.app/sitemap.xml
+Sitemap: https://primergroup.co.uk/sitemap.xml
