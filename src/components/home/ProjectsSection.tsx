@@ -50,7 +50,7 @@ export function ProjectsSection() {
               Featured Projects
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground">
-              Delivering Excellence Across Merseyside
+              Delivering Excellence <span className="text-gradient">Across Merseyside</span>
             </h2>
           </div>
           <Button variant="heroOutline" size="lg" asChild>
