@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 
 const WHATSAPP_NUMBER = "447838121592";
 
-const faqs = [
+export const faqs = [
   {
     question: "What types of commercial roofing systems do you install?",
     answer: "We specialise in flat roofing systems including EPDM rubber, TPO, PVC single-ply membranes, built-up felt roofing, GRP fibreglass, and liquid-applied waterproofing. We also install metal roofing, composite panels, and green roof systems for commercial and industrial properties."
