@@ -8,7 +8,7 @@ const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-accent via-accent to-cyan-400 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-accent via-accent to-emerald-400 relative overflow-hidden">
       {/* Glass orbs */}
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
