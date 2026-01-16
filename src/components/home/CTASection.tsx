@@ -24,7 +24,7 @@ export function CTASection() {
           className="text-center max-w-3xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-            Ready to Start Your Project?
+            Ready to Start Your <span className="text-gradient">Project?</span>
           </h2>
           <p className="text-lg text-primary-foreground/70 mb-10">
             Get a free, no-obligation quote within 24 hours. Our team is ready 
