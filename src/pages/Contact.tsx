@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { MessageCircle, Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { MessageCircle, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -23,16 +23,8 @@ const contactMethods = [
     icon: Phone,
     title: "Phone",
     description: "Speak directly with our team",
-    value: "01234 567 890",
-    href: "tel:+441234567890",
-    highlight: false,
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    description: "For detailed enquiries",
-    value: "info@primergroup.co.uk",
-    href: "mailto:info@primergroup.co.uk",
+    value: "01704 542122",
+    href: "tel:01704542122",
     highlight: false,
   },
 ];
@@ -107,7 +99,7 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-3 gap-6 mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 mb-16">
             {contactMethods.map((method, index) => (
               <motion.a
                 key={method.title}
