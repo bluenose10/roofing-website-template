@@ -93,7 +93,7 @@ export function ServicesSection() {
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className={`group relative bg-transparent border-2 border-white/10 rounded-2xl p-8 hover:border-[#F3CD45] hover:shadow-xl transition-all duration-300 overflow-hidden ${
+              className={`group relative bg-white border-2 border-border rounded-2xl p-8 hover:border-[#F3CD45] hover:shadow-xl transition-all duration-300 overflow-hidden ${
                 index === 0 ? "lg:row-span-2" : ""
               }`}
             >
