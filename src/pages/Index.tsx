@@ -35,7 +35,7 @@ const Index = () => {
       { "@type": "City", name: "St Helens" },
       { "@type": "City", name: "Knowsley" },
       { "@type": "City", name: "Sefton" },
-      { "@type": "AdministrativeArea", name: "Greater Manchester" },
+      { "@type": "AdministrativeArea", name: "Merseyside" },
       { "@type": "AdministrativeArea", name: "Lancashire" },
       { "@type": "AdministrativeArea", name: "Cheshire" },
     ],
