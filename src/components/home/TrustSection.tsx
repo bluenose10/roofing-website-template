@@ -57,7 +57,7 @@ export function TrustSection() {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Trusted Commercial <span className="text-gradient">Roofing Experts</span>
+            Trusted Commercial Roofing Experts
           </h2>
           <p className="text-lg text-muted-foreground">
             We've built our reputation on quality workmanship, reliability, 
