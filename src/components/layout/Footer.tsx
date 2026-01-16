@@ -4,13 +4,6 @@ import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 const WHATSAPP_NUMBER = "447000000000";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
 
-const services = [
-  { name: "Industrial Roof Installation", href: "/services#industrial" },
-  { name: "Commercial Flat Roofing", href: "/services#flat-roof" },
-  { name: "Roof Repair & Maintenance", href: "/services#repair" },
-  { name: "Emergency Leak Response", href: "/services#emergency" },
-  { name: "Roof Inspections", href: "/services#inspections" },
-];
 
 const company = [
   { name: "About Us", href: "/about" },
@@ -25,45 +18,7 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
       
       <div className="container-wide py-16 lg:py-20 relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="space-y-6">
-            <div>
-              <span className="font-bold text-lg tracking-tight">PRIMER GROUP</span>
-              <span className="block text-xs text-white/50 tracking-widest">LTD</span>
-            </div>
-            <p className="text-white/60 text-sm leading-relaxed">
-              Southport's trusted commercial roofing specialists. Delivering precision 
-              industrial roofing solutions across Merseyside.
-            </p>
-            <div className="flex items-center gap-4">
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-[#25D366] rounded-xl flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-[#25D366]/30"
-              >
-                <MessageCircle className="w-5 h-5 text-white" />
-              </a>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="font-bold text-lg mb-6">Services</h3>
-            <ul className="space-y-3">
-              {services.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    to={item.href}
-                    className="text-white/60 hover:text-accent transition-colors text-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
           {/* Company */}
           <div>
