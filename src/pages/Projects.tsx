@@ -7,6 +7,7 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import project5 from "@/assets/project-5.jpg";
 
 const categories = ["All", "Industrial Roofers", "Commercial Roofing", "Flat Roof", "Metal Roof"];
 
@@ -58,7 +59,7 @@ const projects = [
   },
   {
     id: 5,
-    image: project2,
+    image: project5,
     title: "Retail Park Development",
     category: "Commercial",
     size: "52,000 sq ft",
