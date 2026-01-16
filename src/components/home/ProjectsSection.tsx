@@ -36,11 +36,6 @@ const projects = [
 export function ProjectsSection() {
   return (
     <section className="section-padding bg-primary relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
-      </div>
 
       <div className="container-wide relative">
         {/* Header */}
@@ -76,7 +71,7 @@ export function ProjectsSection() {
               whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, type: "spring", stiffness: 300, damping: 20 }}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/5] border-2 border-white/20 hover:border-accent shadow-xl hover:shadow-2xl hover:shadow-accent/30 transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/5] border border-white/10 hover:border-[#F3CD45] shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <img
                 src={project.image}
@@ -85,8 +80,8 @@ export function ProjectsSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
               
-              {/* Glass overlay on hover */}
-              <div className="absolute inset-0 backdrop-blur-[2px] bg-accent/0 group-hover:bg-accent/15 transition-all duration-500" />
+              {/* Subtle overlay on hover */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
               
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
