@@ -49,6 +49,8 @@ const Contact = () => {
         'form-name': 'contact',
         'name': formData.name,
         'email': formData.email,
+        'phone': formData.phone,
+        'projectType': formData.projectType,
         'message': formData.message
       }).toString();
 
