@@ -36,8 +36,8 @@ export function CTASection() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
+              variant="whatsapp"
               size="xl" 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl shadow-primary/30"
               asChild
             >
               <a
@@ -50,9 +50,8 @@ export function CTASection() {
               </a>
             </Button>
             <Button 
-              variant="glass" 
+              variant="cta" 
               size="xl"
-              className="border-primary/30 text-primary hover:bg-primary/10"
               asChild
             >
               <Link to="/contact">

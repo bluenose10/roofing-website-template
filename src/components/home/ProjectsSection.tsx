@@ -90,7 +90,7 @@ export function ProjectsSection() {
               
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block px-3 py-1 backdrop-blur-md bg-accent text-primary-foreground text-xs font-bold rounded-full mb-3 glow-accent border border-accent">
+                <span className="inline-block px-3 py-1 backdrop-blur-md bg-[#4B4239] text-white text-xs font-bold rounded-full mb-3 border-2 border-[#F3CD45]">
                   {project.category}
                 </span>
                 <h3 className="text-xl font-bold text-white mb-2">
@@ -108,7 +108,7 @@ export function ProjectsSection() {
                 to={`/projects/${project.id}`}
                 className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
               >
-                <span className="px-6 py-3 backdrop-blur-xl bg-accent text-primary-foreground font-bold rounded-xl transform translate-y-4 group-hover:translate-y-0 transition-transform glow-accent-strong border-2 border-accent">
+                <span className="px-6 py-3 backdrop-blur-xl bg-[#4B4239] text-white font-bold rounded-xl transform translate-y-4 group-hover:translate-y-0 transition-transform border-2 border-[#F3CD45]">
                   View Project
                 </span>
               </Link>
