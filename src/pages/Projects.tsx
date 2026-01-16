@@ -10,7 +10,7 @@ import project4 from "@/assets/project-4.jpg";
 import project5 from "@/assets/project-5.jpg";
 import project6 from "@/assets/project-6.jpg";
 
-const categories = ["All", "Industrial Roofers", "Commercial Roofing", "Flat Roof", "Metal Roof"];
+const categories = ["All", "Industrial", "Commercial", "Flat Roof", "Metal Roof"];
 
 const projects = [
   {
