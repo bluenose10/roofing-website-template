@@ -174,14 +174,20 @@ const Contact = () => {
                   </Button>
                 </div>
               ) : (
-                <form 
-                  onSubmit={handleSubmit} 
+                <form
+                  onSubmit={handleSubmit}
                   className="space-y-5"
                   method="POST"
                   data-netlify="true"
+                  data-netlify-honeypot="bot-field"
                   name="contact"
                 >
                   <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
