@@ -62,9 +62,9 @@ export function CTASection() {
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-6">
-            <a href="tel:+441234567890" className="flex items-center gap-2 text-primary/70 hover:text-primary transition-colors">
+            <a href="tel:01704542122" className="flex items-center gap-2 text-primary/70 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">Or call: 01234 567 890</span>
+              <span className="text-sm font-medium">Or call: 01704 542122</span>
             </a>
           </div>
         </motion.div>
