@@ -8,8 +8,8 @@
 
 @layer base {
   :root {
-    /* Core Colors - Rich Dark & Clean White */
-    --background: 0 0% 100%;
+    /* Core Colors */
+    --background: 220 10% 95%;
     --foreground: 220 20% 10%;
 
     /* Card & Popover */
