@@ -56,8 +56,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/70 mb-8 max-w-lg"
           >
-            Southport's trusted industrial roofing specialists. Delivering exceptional 
-            quality and reliability across Merseyside since 2009.
+            Primer Group Ltd Southport's trusted commercial & industrial roofing specialists. 
+            Delivering exceptional quality and reliability across Merseyside for over 35 years.
           </motion.p>
 
           <motion.div
