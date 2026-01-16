@@ -4,11 +4,31 @@ import { Target, Eye, Users, Award, Shield, Clock, CheckCircle } from "lucide-re
 import heroImage from "@/assets/hero-roofing.jpg";
 
 const timeline = [
-  { year: "2009", title: "Founded", description: "Primer Group established in Southport with a vision for quality commercial roofing." },
-  { year: "2012", title: "First Major Contract", description: "Secured our first large-scale industrial roofing project." },
-  { year: "2016", title: "Team Expansion", description: "Grew to 20+ trained roofing specialists and invested in new equipment." },
-  { year: "2019", title: "Drone Technology", description: "Introduced drone surveys and thermal imaging for advanced diagnostics." },
-  { year: "2023", title: "Industry Recognition", description: "Received regional excellence award for commercial roofing services." },
+  {
+    year: "2009",
+    title: "Founded",
+    description: "Primer Group established in Southport with a vision for quality commercial roofing.",
+  },
+  {
+    year: "2012",
+    title: "First Major Contract",
+    description: "Secured our first large-scale industrial roofing project.",
+  },
+  {
+    year: "2016",
+    title: "Team Expansion",
+    description: "Grew to 20+ trained roofing specialists and invested in new equipment.",
+  },
+  {
+    year: "2019",
+    title: "Drone Technology",
+    description: "Introduced drone surveys and thermal imaging for advanced diagnostics.",
+  },
+  {
+    year: "2023",
+    title: "Industry Recognition",
+    description: "Received regional excellence award for commercial roofing services.",
+  },
 ];
 
 const values = [
@@ -50,22 +70,16 @@ const About = () => {
           <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         </div>
-        
+
         <div className="container-wide relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-              About Us
-            </span>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">About Us</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Built on Quality, Driven by Excellence
             </h1>
             <p className="text-lg text-white/80">
-              Since 2009, Primer Group has been Southport's trusted commercial roofing 
-              specialists, delivering precision workmanship across Merseyside.
+              Since 2009, Primer Group has been Southport's trusted commercial roofing specialists, delivering precision
+              workmanship across Merseyside.
             </p>
           </motion.div>
         </div>
@@ -86,9 +100,8 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To provide exceptional commercial roofing solutions that protect businesses, 
-                enhance building value, and exceed client expectations through skilled 
-                craftsmanship and innovative approaches.
+                To provide exceptional commercial roofing solutions that protect businesses, enhance building value, and
+                exceed client expectations through skilled craftsmanship and innovative approaches.
               </p>
             </motion.div>
 
@@ -103,9 +116,8 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Vision</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To be recognized as Northern England's premier commercial roofing 
-                contractor, setting industry standards for quality, innovation, and 
-                customer service excellence.
+                To be recognized as Northern England's premier commercial roofing contractor, setting industry standards
+                for quality, innovation, and customer service excellence.
               </p>
             </motion.div>
           </div>
@@ -121,12 +133,8 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-              Our Journey
-            </span>
-            <h2 className="text-heading text-foreground">
-              15+ Years of Excellence
-            </h2>
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">Our Journey</span>
+            <h2 className="text-heading text-foreground">35+ Years of Excellence</h2>
           </motion.div>
 
           <div className="relative">
@@ -170,12 +178,8 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-              Our Values
-            </span>
-            <h2 className="text-heading text-foreground">
-              What Drives Us
-            </h2>
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">Our Values</span>
+            <h2 className="text-heading text-foreground">What Drives Us</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -208,12 +212,8 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-              Our Team
-            </span>
-            <h2 className="text-heading text-primary-foreground">
-              Experienced Professionals
-            </h2>
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">Our Team</span>
+            <h2 className="text-heading text-primary-foreground">Experienced Professionals</h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -259,7 +259,10 @@ const About = () => {
               </div>
               <div className="flex flex-wrap justify-center gap-4">
                 {["NFRC Member", "CSCS Certified", "Safe Contractor", "CompetentRoofer"].map((cert) => (
-                  <div key={cert} className="flex items-center gap-2 px-4 py-2 bg-muted border border-border rounded-lg">
+                  <div
+                    key={cert}
+                    className="flex items-center gap-2 px-4 py-2 bg-muted border border-border rounded-lg"
+                  >
                     <CheckCircle className="w-4 h-4 text-accent" />
                     <span className="text-sm font-medium text-foreground">{cert}</span>
                   </div>
