@@ -68,18 +68,19 @@ export function TrustSection() {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -6, scale: 1.02 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group flex items-start gap-4 p-6 bg-background rounded-2xl border border-transparent hover:border-accent/30 transition-all duration-300"
+              transition={{ delay: index * 0.1, type: "spring", stiffness: 300, damping: 20 }}
+              className="group flex items-start gap-4 p-6 bg-card border-2 border-border/70 rounded-2xl hover:border-accent hover:shadow-lg hover:shadow-accent/15 transition-all duration-300"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent group-hover:glow-accent transition-all duration-300">
-                <feature.icon className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
+              <div className="w-12 h-12 bg-accent/15 border border-accent/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent group-hover:glow-accent transition-all duration-300">
+                <feature.icon className="w-6 h-6 text-accent group-hover:text-primary-foreground transition-colors" />
               </div>
               <div>
                 <h3 className="font-bold text-foreground mb-1 group-hover:text-accent transition-colors">{feature.title}</h3>
@@ -93,11 +94,13 @@ export function TrustSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.01 }}
           viewport={{ once: true }}
-          className="bg-background border border-border rounded-3xl p-8 md:p-12 relative overflow-hidden"
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          className="bg-card border-2 border-accent/40 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-lg shadow-accent/10"
         >
           {/* Accent glow */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
           
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
@@ -110,12 +113,13 @@ export function TrustSection() {
             </div>
             <div className="flex flex-wrap justify-center gap-3">
               {certifications.map((cert) => (
-                <span
+                <motion.span
                   key={cert}
-                  className="px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-medium text-foreground hover:bg-accent hover:text-primary transition-all duration-300 cursor-default"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-4 py-2 bg-accent/15 border-2 border-accent/40 rounded-full text-sm font-medium text-foreground hover:bg-accent hover:text-primary-foreground hover:border-accent transition-colors duration-300 cursor-default"
                 >
                   {cert}
-                </span>
+                </motion.span>
               ))}
             </div>
           </div>
