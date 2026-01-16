@@ -57,7 +57,7 @@ export function TrustSection() {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Commercial Roof Installation Experts Southport
+            Commercial Roofers Southport
           </h2>
           <p className="text-lg text-muted-foreground mb-4">
             Planning a new commercial build in Southport? Our licensed roof installation specialists are ready to deliver. We handle a wide range of roofing materials and take pride in bringing your commercial roofing vision to life.
