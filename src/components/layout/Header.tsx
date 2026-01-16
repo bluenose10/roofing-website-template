@@ -24,7 +24,7 @@ export function Header() {
       <nav className="container-wide flex items-center justify-between py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <span className="font-bold text-lg tracking-tight text-accent">Primer Group LTD</span>
+          <span className="font-bold text-lg tracking-tight text-accent">Primer Group Ltd</span>
         </Link>
 
         {/* Desktop Navigation */}
