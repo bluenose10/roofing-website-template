@@ -57,11 +57,13 @@ export function TrustSection() {
             Why Choose Us
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Trusted Commercial Roofing Experts
+            Commercial Roof Installation Experts Southport
           </h2>
+          <p className="text-lg text-muted-foreground mb-4">
+            If you're planning a new commercial construction in Southport and need a roof installation expert, we'd be glad to help. Our licensed team works with a variety of materials and would be happy to assist with your commercial roofing project.
+          </p>
           <p className="text-lg text-muted-foreground">
-            We've built our reputation on quality workmanship, reliability, 
-            and exceptional customer service.
+            As with any roofing project, our commercial roofing contractors start with a thorough consultation to ensure we're on the same page. We work closely with clients to design the roof, going through everything from picking materials to installing gutters.
           </p>
         </motion.div>
 
