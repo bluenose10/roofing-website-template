@@ -31,7 +31,7 @@ const Index = () => {
     telephone: "+447838121592",
     areaServed: [
       { "@type": "City", name: "Liverpool" },
-      { "@type": "City", name: "Wirral" },
+      { "@type": "City", name: "Southport" },
       { "@type": "City", name: "St Helens" },
       { "@type": "City", name: "Knowsley" },
       { "@type": "City", name: "Sefton" },
