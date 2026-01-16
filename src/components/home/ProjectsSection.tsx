@@ -36,7 +36,6 @@ const projects = [
 export function ProjectsSection() {
   return (
     <section className="section-padding bg-primary relative overflow-hidden">
-
       <div className="container-wide relative">
         {/* Header */}
         <motion.div
@@ -79,34 +78,22 @@ export function ProjectsSection() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
-              
+
               {/* Subtle overlay on hover */}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
-              
+
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <span className="inline-block px-3 py-1 backdrop-blur-md bg-[#4B4239] text-white text-xs font-bold rounded-full mb-3 border-2 border-[#F3CD45]">
                   {project.category}
                 </span>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {project.title}
-                </h3>
+                <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                 <div className="flex items-center gap-4 text-white/70 text-sm">
                   <span>{project.size}</span>
                   <span className="w-1 h-1 bg-white/50 rounded-full" />
                   <span>{project.location}</span>
                 </div>
               </div>
-
-              {/* Hover Button */}
-              <Link
-                to={`/projects/${project.id}`}
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
-              >
-                <span className="px-6 py-3 backdrop-blur-xl bg-[#4B4239] text-white font-bold rounded-xl transform translate-y-4 group-hover:translate-y-0 transition-transform border-2 border-[#F3CD45]">
-                  View Project
-                </span>
-              </Link>
             </motion.div>
           ))}
         </div>
