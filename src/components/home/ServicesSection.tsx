@@ -93,20 +93,22 @@ export function ServicesSection() {
             <motion.div
               key={service.number}
               variants={itemVariants}
-              className={`group relative bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-all duration-500 overflow-hidden ${
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className={`group relative bg-secondary/80 border-2 border-border/60 rounded-2xl p-8 hover:border-accent hover:shadow-xl hover:shadow-accent/20 transition-all duration-300 overflow-hidden ${
                 index === 0 ? "lg:row-span-2" : ""
               }`}
             >
               {/* Hover glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:to-accent/10 transition-all duration-500 rounded-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/10 group-hover:to-accent/20 transition-all duration-500 rounded-2xl" />
               
               <div className="relative">
                 <div className="flex items-start justify-between mb-6">
-                  <span className="text-5xl font-bold text-muted/30 group-hover:text-accent/20 transition-colors">
+                  <span className="text-5xl font-bold text-border group-hover:text-accent/30 transition-colors duration-300">
                     {service.number}
                   </span>
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 group-hover:glow-accent transition-all duration-300">
-                    <service.icon className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
+                  <div className="w-12 h-12 bg-accent/15 border border-accent/30 rounded-xl flex items-center justify-center group-hover:bg-accent group-hover:scale-110 group-hover:glow-accent transition-all duration-300">
+                    <service.icon className="w-6 h-6 text-accent group-hover:text-primary-foreground transition-colors" />
                   </div>
                 </div>
                 
@@ -119,10 +121,10 @@ export function ServicesSection() {
                 
                 <Link
                   to={service.href}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-foreground group-hover:text-accent transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-accent opacity-80 group-hover:opacity-100 transition-all"
                 >
                   Learn more
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </Link>
               </div>
             </motion.div>

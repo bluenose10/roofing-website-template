@@ -73,31 +73,32 @@ export function ProjectsSection() {
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/5]"
+              transition={{ delay: index * 0.1, type: "spring", stiffness: 300, damping: 20 }}
+              className="group relative overflow-hidden rounded-2xl aspect-[4/5] border-2 border-white/20 hover:border-accent shadow-xl hover:shadow-2xl hover:shadow-accent/30 transition-all duration-300"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
               
               {/* Glass overlay on hover */}
-              <div className="absolute inset-0 backdrop-blur-[2px] bg-accent/0 group-hover:bg-accent/10 transition-all duration-500" />
+              <div className="absolute inset-0 backdrop-blur-[2px] bg-accent/0 group-hover:bg-accent/15 transition-all duration-500" />
               
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block px-3 py-1 backdrop-blur-md bg-accent/90 text-primary text-xs font-semibold rounded-full mb-3 glow-accent">
+                <span className="inline-block px-3 py-1 backdrop-blur-md bg-accent text-primary-foreground text-xs font-bold rounded-full mb-3 glow-accent border border-accent">
                   {project.category}
                 </span>
                 <h3 className="text-xl font-bold text-white mb-2">
                   {project.title}
                 </h3>
-                <div className="flex items-center gap-4 text-white/60 text-sm">
+                <div className="flex items-center gap-4 text-white/70 text-sm">
                   <span>{project.size}</span>
-                  <span className="w-1 h-1 bg-white/40 rounded-full" />
+                  <span className="w-1 h-1 bg-white/50 rounded-full" />
                   <span>{project.location}</span>
                 </div>
               </div>
@@ -107,7 +108,7 @@ export function ProjectsSection() {
                 to={`/projects/${project.id}`}
                 className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
               >
-                <span className="px-6 py-3 backdrop-blur-xl bg-accent text-primary font-semibold rounded-xl transform translate-y-4 group-hover:translate-y-0 transition-transform glow-accent-strong">
+                <span className="px-6 py-3 backdrop-blur-xl bg-accent text-primary-foreground font-bold rounded-xl transform translate-y-4 group-hover:translate-y-0 transition-transform glow-accent-strong border-2 border-accent">
                   View Project
                 </span>
               </Link>
