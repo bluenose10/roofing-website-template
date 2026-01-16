@@ -19,7 +19,8 @@ const projects = [
     location: "Southport",
     material: "EPDM Membrane",
     duration: "6 weeks",
-    description: "Complete roof replacement for a major distribution centre, including new insulation and drainage systems.",
+    description:
+      "Complete roof replacement for a major distribution centre, including new insulation and drainage systems.",
   },
   {
     id: 2,
@@ -80,10 +81,8 @@ const projects = [
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
-    : projects.filter(p => p.category === activeCategory);
+
+  const filteredProjects = activeCategory === "All" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
     <Layout>
@@ -93,22 +92,14 @@ const Projects = () => {
           <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         </div>
-        
+
         <div className="container-wide relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-              Our Portfolio
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Featured Projects
-            </h1>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">Our Portfolio</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Featured Projects</h1>
             <p className="text-lg text-white/80">
-              Explore our portfolio of commercial roofing projects across Southport 
-              and Merseyside. Each project showcases our commitment to quality and precision.
+              Explore our portfolio of commercial roofing projects across Southport and Merseyside. Each project
+              showcases our commitment to quality and precision.
             </p>
           </motion.div>
         </div>
@@ -169,10 +160,8 @@ const Projects = () => {
                     <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                      {project.description}
-                    </p>
-                    
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{project.description}</p>
+
                     <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                       <div>
                         <span className="text-muted-foreground">Size:</span>
@@ -191,11 +180,6 @@ const Projects = () => {
                         <span className="font-medium text-foreground ml-1">{project.material}</span>
                       </div>
                     </div>
-
-                    <button className="inline-flex items-center gap-2 text-sm font-semibold text-accent group-hover:gap-3 transition-all">
-                      View Details
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
                   </div>
                 </motion.article>
               ))}
