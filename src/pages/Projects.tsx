@@ -6,6 +6,7 @@ import heroImage from "@/assets/hero-roofing.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import project3 from "@/assets/project-4.jpg";
 
 const categories = ["All", "Industrial Roofers", "Commercial Roofing", "Flat Roof", "Metal Roof"];
 
@@ -68,7 +69,7 @@ const projects = [
   },
   {
     id: 6,
-    image: project3,
+    image: project4,
     title: "Agricultural Storage Facility",
     category: "Metal Roof",
     size: "35,000 sq ft",
