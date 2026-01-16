@@ -89,7 +89,7 @@ const Projects = () => {
       {/* Hero */}
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="Commercial roofers southport" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         </div>
 
