@@ -102,7 +102,7 @@ const Contact = () => {
               Contact Us
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Let's Discuss Your Project
+              Let's Discuss <span className="text-gradient">Your Project</span>
             </h1>
             <p className="text-lg text-white/80">
               Ready to get started? Contact us for a free, no-obligation quote. 

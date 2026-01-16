@@ -99,7 +99,7 @@ const Projects = () => {
         <div className="container-wide relative">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">Our Portfolio</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Featured Projects</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Featured <span className="text-gradient">Projects</span></h1>
             <p className="text-lg text-white/80">
               Explore our portfolio of commercial roofing projects across Southport and Merseyside. Each project
               showcases our commitment to quality and precision.

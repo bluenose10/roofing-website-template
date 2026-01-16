@@ -103,7 +103,7 @@ const Services = () => {
               Our Services
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Commercial Roofing Services
+              Commercial Roofing <span className="text-gradient">Services</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
               From new installations to emergency repairs, we deliver comprehensive 

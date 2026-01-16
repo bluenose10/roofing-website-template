@@ -75,7 +75,7 @@ const About = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">About Us</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Built on Quality, Driven by Excellence
+              Built on Quality, <span className="text-gradient">Driven by Excellence</span>
             </h1>
             <p className="text-lg text-white/80">
               Since 2009, Primer Group has been Southport's trusted commercial roofing specialists, delivering precision
