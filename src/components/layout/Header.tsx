@@ -34,9 +34,7 @@ export function Header() {
               key={item.name}
               to={item.href}
               className={`text-sm font-medium transition-colors ${
-                location.pathname === item.href
-                  ? "text-accent"
-                  : "text-white/80 hover:text-white"
+                location.pathname === item.href ? "text-accent" : "text-white/80 hover:text-white"
               }`}
             >
               {item.name}
@@ -46,9 +44,11 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:01704542122" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
+          <a
+            href="tel:01704542122"
+            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+          >
             <Phone className="w-4 h-4" />
-            <span className="text-sm font-medium">Call Us</span>
           </a>
           <Button variant="whatsapp" size="default" asChild>
             <a
@@ -64,10 +64,7 @@ export function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-white p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
+        <button className="lg:hidden text-white p-2" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
@@ -88,9 +85,7 @@ export function Header() {
                   to={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block text-lg font-medium py-2 ${
-                    location.pathname === item.href
-                      ? "text-accent"
-                      : "text-white/80"
+                    location.pathname === item.href ? "text-accent" : "text-white/80"
                   }`}
                 >
                   {item.name}
