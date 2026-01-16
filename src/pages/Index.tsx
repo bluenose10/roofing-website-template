@@ -143,14 +143,6 @@ const Index = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
 
-      {/* Hidden Netlify form for detection */}
-      <form hidden method='POST' name='contact'>
-        <input type="hidden" name="form-name" value="contact" />
-        <input type="text" name="name" />
-        <input type="email" name="email" />
-        <textarea name="message"></textarea>
-      </form>
-
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />
