@@ -61,8 +61,9 @@ export default {
           DEFAULT: "hsl(var(--charcoal))",
           light: "hsl(var(--charcoal-light))",
         },
-        industrial: {
-          orange: "hsl(var(--industrial-orange))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          glow: "hsl(var(--gold-glow))",
         },
         concrete: {
           DEFAULT: "hsl(var(--concrete))",
