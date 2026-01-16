@@ -120,8 +120,8 @@ const Contact = () => {
                 transition={{ delay: index * 0.1 }}
                 className={`group p-6 rounded-xl border-2 transition-all hover:shadow-lg ${
                   method.highlight 
-                    ? "bg-transparent border-[#25D366]/50 hover:border-[#25D366]" 
-                    : "bg-transparent border-white/10 hover:border-[#F3CD45]"
+                    ? "bg-white border-[#25D366]/50 hover:border-[#25D366]" 
+                    : "bg-white border-border hover:border-[#F3CD45]"
                 }`}
               >
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
