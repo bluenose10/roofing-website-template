@@ -51,20 +51,22 @@ export function TrustSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto mb-16"
+          className="text-center mb-16"
         >
           <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-            Why Choose Us
+            Why Choose Primer Group
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Commercial Roofers Southport
+            Best Commercial Roofers Southport
           </h2>
-          <p className="text-lg text-muted-foreground mb-4">
-            Planning a new commercial build in Southport? Our licensed roof installation specialists are ready to deliver. We handle a wide range of roofing materials and take pride in bringing your commercial roofing vision to life.
-          </p>
-          <p className="text-lg text-muted-foreground">
-            Every project begins with an in-depth consultation where our commercial roofing contractors align with your goals. From material selection to gutter fitting, we collaborate closely to craft a roof that meets your exact specifications.
-          </p>
+          <div className="max-w-4xl mx-auto space-y-4">
+            <p className="text-xl text-muted-foreground">
+              As independent commercial roofers in Southport, we've built our reputation on quality workmanship, transparent pricing, and exceptional customer service. Our licensed specialists handle everything from new commercial builds to emergency gutter repairs across Merseyside.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Every project starts with an in-depth consultation where we align with your goals. From material selection to gutter fitting and final inspection, we deliver roofing solutions that exceed expectations and stand the test of time.
+            </p>
+          </div>
         </motion.div>
 
         {/* Features Grid */}
