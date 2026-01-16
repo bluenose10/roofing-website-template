@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
-import { CheckCircle, ArrowRight, MessageCircle, Clock, Shield } from "lucide-react";
+import { CheckCircle, ArrowRight, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-roofing.jpg";
 
 const WHATSAPP_NUMBER = "447000000000";
 
@@ -86,7 +87,11 @@ const Services = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-primary via-primary to-background pt-24 pb-20 lg:pt-32 lg:pb-28 relative overflow-hidden">
+      <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
+        </div>
         
         <div className="container-wide relative">
           <motion.div
@@ -94,12 +99,11 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 border border-accent/30 rounded-full text-accent font-semibold text-sm tracking-wider uppercase mb-6">
-              <Shield className="w-4 h-4" />
-              Professional Roofing
+            <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
+              Our Services
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-              Commercial Roofing <span className="text-gradient">Services</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Commercial Roofing Services
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
               From new installations to emergency repairs, we deliver comprehensive 
