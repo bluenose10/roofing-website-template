@@ -51,12 +51,26 @@ export function Footer() {
                 </span>
               </li>
               <li>
-                <a href="tel:+441234567890" className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
+                <a href="tel:01704542122" className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
                   <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
                     <Phone className="w-4 h-4 text-accent" />
                   </div>
-                  <span className="text-sm">01234 567 890</span>
+                  <span className="text-sm">01704 542122</span>
                 </a>
+              </li>
+              <li>
+                <a href="tel:07838121592" className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
+                  <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
+                    <Phone className="w-4 h-4 text-accent" />
+                  </div>
+                  <span className="text-sm">Mob: 07838 121592</span>
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-white/60">
+                <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
+                  <span className="text-accent text-xs font-bold">8-6</span>
+                </div>
+                <span className="text-sm">Available 8:00am – 18:00</span>
               </li>
               <li>
                 <a href="mailto:info@primergroup.co.uk" className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
