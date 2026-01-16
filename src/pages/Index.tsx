@@ -40,6 +40,8 @@ const Index = () => {
       { "@type": "AdministrativeArea", name: "Cheshire" },
     ],
     serviceType: [
+      "Commercial Roofers",
+      "Commercial Roofing",
       "Commercial Flat Roofing",
       "Industrial Roof Repairs",
       "Emergency Roofing Services",
