@@ -47,7 +47,9 @@ const Contact = () => {
     try {
       const formBody = new URLSearchParams({
         'form-name': 'contact',
-        ...formData
+        'name': formData.name,
+        'email': formData.email,
+        'message': formData.message
       }).toString();
 
       const response = await fetch('/', {
