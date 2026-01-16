@@ -87,9 +87,6 @@ const Services = () => {
     <Layout>
       {/* Hero */}
       <section className="bg-gradient-to-b from-primary via-primary to-background pt-24 pb-20 lg:pt-32 lg:pb-28 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-2xl" />
         
         <div className="container-wide relative">
           <motion.div
@@ -130,7 +127,7 @@ const Services = () => {
                 variants={itemVariants}
                 whileHover={{ scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                className={`group relative bg-secondary/90 border-2 rounded-2xl overflow-hidden transition-all duration-300 ${
+                className={`group relative bg-[#35383D] border-2 rounded-2xl overflow-hidden transition-all duration-300 ${
                   service.urgent 
                     ? "border-accent/60 hover:border-accent hover:shadow-xl hover:shadow-accent/20" 
                     : "border-border/60 hover:border-accent hover:shadow-xl hover:shadow-accent/10"
@@ -166,7 +163,7 @@ const Services = () => {
                         {service.features.map((feature) => (
                           <div 
                             key={feature} 
-                            className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3 border border-border/40"
+                            className="flex items-center gap-3 bg-[#2A2D31] rounded-lg px-4 py-3 border border-white/10"
                           >
                             <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                             <span className="text-foreground text-sm">{feature}</span>
@@ -205,10 +202,7 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary via-primary to-amber-900/50 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 right-1/4 w-72 h-72 bg-accent/20 rounded-full blur-3xl" />
-        
+      <section className="py-20 bg-gradient-to-r from-primary via-primary to-primary relative overflow-hidden">
         <div className="container-wide relative text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
