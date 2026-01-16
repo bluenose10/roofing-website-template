@@ -1,17 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle, Shield, Award, Clock } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-roofing.jpg";
 
 const WHATSAPP_NUMBER = "447000000000";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
-
-const stats = [
-  { icon: Shield, value: "15+", label: "Years Experience" },
-  { icon: Award, value: "500+", label: "Projects Completed" },
-  { icon: Clock, value: "24/7", label: "Emergency Response" },
-];
 
 export function HeroSection() {
   return (
@@ -88,22 +82,6 @@ export function HeroSection() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-          </motion.div>
-
-          {/* Stats with glass effect */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="glass-dark p-6 rounded-2xl inline-flex gap-8 md:gap-12"
-          >
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <stat.icon className="w-5 h-5 text-accent mb-2 mx-auto" />
-                <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-xs md:text-sm text-white/50">{stat.label}</div>
-              </div>
-            ))}
           </motion.div>
         </div>
       </div>
