@@ -55,7 +55,7 @@ const values = [
 ];
 
 const team = [
-  { name: "Managing Director", role: "Leadership & Strategy", experience: "25+ years" },
+  { name: "Managing Director", role: "Leadership & Strategy", experience: "35+ years" },
   { name: "Operations Manager", role: "Project Coordination", experience: "18+ years" },
   { name: "Lead Surveyor", role: "Inspections & Assessments", experience: "15+ years" },
   { name: "Site Foreman", role: "On-Site Management", experience: "20+ years" },
