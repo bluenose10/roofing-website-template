@@ -44,8 +44,6 @@ const certifications = [
 export function TrustSection() {
   return (
     <section className="section-padding bg-muted relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2" />
       
       <div className="container-wide relative">
         {/* Header */}
@@ -99,8 +97,6 @@ export function TrustSection() {
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
           className="bg-card border-2 border-accent/40 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-lg shadow-accent/10"
         >
-          {/* Accent glow */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-3xl" />
           
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
             <div>

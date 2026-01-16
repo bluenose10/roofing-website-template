@@ -31,19 +31,6 @@ export function HeroSection() {
         }} />
       </div>
 
-      {/* Floating glass elements */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="absolute top-1/4 right-[15%] w-64 h-64 rounded-full bg-accent/20 blur-3xl"
-      />
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.7, duration: 1 }}
-        className="absolute bottom-1/3 right-[25%] w-48 h-48 rounded-full bg-accent/10 blur-3xl"
-      />
 
       {/* Content */}
       <div className="relative container-wide py-20 lg:py-32">
