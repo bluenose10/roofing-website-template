@@ -47,9 +47,7 @@ export function Header() {
           <a
             href="tel:01704542122"
             className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
-          >
-            <Phone className="w-4 h-4" />
-          </a>
+          ></a>
           <Button variant="whatsapp" size="default" asChild>
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
