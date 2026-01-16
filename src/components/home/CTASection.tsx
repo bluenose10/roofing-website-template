@@ -8,10 +8,10 @@ const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-gradient-to-br from-accent via-accent to-amber-400 relative overflow-hidden">
+    <section className="py-24 bg-primary relative overflow-hidden">
       {/* Glass orbs */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       {/* Grid pattern */}
       <div className="absolute inset-0 opacity-10" style={{
@@ -26,10 +26,10 @@ export function CTASection() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-lg text-primary/70 mb-10">
+          <p className="text-lg text-primary-foreground/70 mb-10">
             Get a free, no-obligation quote within 24 hours. Our team is ready 
             to discuss your commercial roofing needs.
           </p>
@@ -62,7 +62,7 @@ export function CTASection() {
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-6">
-            <a href="tel:01704542122" className="flex items-center gap-2 text-primary/70 hover:text-primary transition-colors">
+            <a href="tel:01704542122" className="flex items-center gap-2 text-primary-foreground/70 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-medium">Or call: 01704 542122</span>
             </a>
