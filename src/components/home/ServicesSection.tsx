@@ -71,7 +71,7 @@ export function ServicesSection() {
             Our Services
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Expert Commercial <span className="text-gradient">Roofing Solutions</span>
+            Expert Commercial Roofing Solutions
           </h2>
           <p className="text-lg text-muted-foreground">
             From new installations to emergency repairs, we deliver comprehensive 
