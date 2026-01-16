@@ -63,7 +63,7 @@ export function TrustSection() {
             <p className="text-xl text-muted-foreground">
               As independent commercial roofers in Southport, we've built our reputation on quality workmanship, transparent pricing, and exceptional customer service. Our licensed specialists handle everything from new commercial builds to emergency gutter repairs across Merseyside.
             </p>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-xl text-muted-foreground">
               Every project starts with an in-depth consultation where we align with your goals. From material selection to gutter fitting and final inspection, we deliver roofing solutions that exceed expectations and stand the test of time.
             </p>
           </div>
