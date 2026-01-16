@@ -1,18 +1,32 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-roofing.jpg";
+import { useRef } from "react";
 
 const WHATSAPP_NUMBER = "447838121592";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
 
 export function HeroSection() {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img src={heroImage} alt="Commercial roofing southport" className="w-full h-full object-cover" />
+    <section ref={sectionRef} className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background Image with Parallax */}
+      <motion.div
+        className="absolute inset-0"
+        style={{ y: imageY }}
+      >
+        <img src={heroImage} alt="Commercial roofing southport" className="w-full h-full object-cover scale-110" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         {/* Subtle grid overlay */}
         <div
@@ -22,10 +36,13 @@ export function HeroSection() {
             backgroundSize: "50px 50px",
           }}
         />
-      </div>
+      </motion.div>
 
-      {/* Content */}
-      <div className="relative container-wide py-20 lg:py-32">
+      {/* Content with Parallax */}
+      <motion.div
+        className="relative container-wide py-20 lg:py-32"
+        style={{ y: contentY, opacity }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-block px-4 py-2 glass-dark text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30">
@@ -80,7 +97,7 @@ export function HeroSection() {
             </Button>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll Indicator */}
       <motion.div

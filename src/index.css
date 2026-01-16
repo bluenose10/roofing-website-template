@@ -7,6 +7,18 @@
 /* Primer Group LTD - Modern Glassmorphism Design System */
 
 @layer base {
+  /* Premium smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom cursor for desktop only */
+  @media (min-width: 1024px) {
+    * {
+      cursor: none !important;
+    }
+  }
+
   :root {
     /* Core Colors */
     --background: 220 10% 95%;
@@ -158,6 +170,32 @@
 
   .glow-accent-strong {
     box-shadow: 0 0 30px hsla(45 87% 61% / 0.5), 0 0 60px hsla(45 87% 61% / 0.2);
+  }
+
+  /* Premium hover transitions */
+  .premium-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .premium-hover:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Parallax container */
+  .parallax-container {
+    perspective: 1000px;
+  }
+
+  .parallax-slow {
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .parallax-medium {
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .parallax-fast {
+    transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
   }
 }
 
