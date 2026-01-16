@@ -24,14 +24,33 @@ const Index = () => {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    name: "Commercial Roofers Southport",
+    "@id": "https://primergroup.co.uk/#organization",
+    name: "Primer Group LTD",
+    alternateName: "Primer Group",
+    legalName: "Primer Group Limited",
     description:
-      "Commercial and industrial roofing contractors Southport. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
+      "Commercial and industrial roofing contractors serving Southport and Merseyside. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
     url: "https://primergroup.co.uk",
     telephone: "+447838121592",
+    email: "info@primergroup.co.uk",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "147 Hampton Road",
+      addressLocality: "Southport",
+      addressRegion: "Merseyside",
+      postalCode: "PR8 5DJ",
+      addressCountry: "GB",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "53.6476",
+      longitude: "-3.0069",
+    },
     areaServed: [
-      { "@type": "City", name: "Liverpool" },
-      { "@type": "City", name: "Southport" },
+      { "@type": "City", name: "Southport", "@id": "https://en.wikipedia.org/wiki/Southport" },
+      { "@type": "City", name: "Liverpool", "@id": "https://en.wikipedia.org/wiki/Liverpool" },
+      { "@type": "City", name: "Formby" },
+      { "@type": "City", name: "Ormskirk" },
       { "@type": "City", name: "St Helens" },
       { "@type": "City", name: "Knowsley" },
       { "@type": "City", name: "Sefton" },
@@ -40,28 +59,82 @@ const Index = () => {
       { "@type": "AdministrativeArea", name: "Cheshire" },
     ],
     serviceType: [
-      "Commercial Roofers",
       "Commercial Roofing",
+      "Industrial Roofing",
       "Commercial Flat Roofing",
       "Industrial Roof Repairs",
       "Emergency Roofing Services",
       "Roof Maintenance",
+      "Roof Inspections",
       "EPDM Roofing",
       "TPO Roofing",
       "GRP Fibreglass Roofing",
+      "Roof Replacement",
+      "Flat Roof Installation",
     ],
-    priceRange: "£45-£120 per m²",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
+    priceRange: "££",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Roofing Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Commercial Flat Roofing",
+            description: "Professional flat roofing installation and repair for commercial properties",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Emergency Roof Repairs",
+            description: "24/7 emergency roofing repair services across Merseyside",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Roof Inspections",
+            description: "Comprehensive roof inspection and maintenance services",
+          },
+        },
+      ],
     },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Saturday",
+        opens: "09:00",
+        closes: "13:00",
+      },
+    ],
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
       reviewCount: "500",
     },
+    foundingDate: "1989",
+    slogan: "Precision Commercial Roofing",
+    knowsAbout: [
+      "Commercial Roofing",
+      "Industrial Roofing",
+      "Flat Roofing Systems",
+      "EPDM Roofing",
+      "TPO Roofing",
+      "Emergency Roof Repairs",
+      "Roof Maintenance",
+    ],
   };
 
   return (

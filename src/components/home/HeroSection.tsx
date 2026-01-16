@@ -26,7 +26,7 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative container-wide py-20 lg:py-32">
-        <div className="max-w-2xl">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-block px-4 py-2 glass-dark text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30">
               Commercial Roofers Southport
@@ -39,7 +39,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] mb-6"
           >
-            PRECISION
+            PRIMER GROUP
             <br />
             <span className="text-gradient">COMMERCIAL</span>
             <br />
@@ -50,7 +50,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-white/70 mb-8 max-w-lg"
+            className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto"
           >
             Primer Group Ltd Southport's trusted commercial & industrial roofing specialists. Delivering exceptional
             quality and reliability across Merseyside for over 35 years.
@@ -60,7 +60,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            className="flex flex-col sm:flex-row gap-4 mb-12 justify-center"
           >
             <Button variant="whatsapp" size="xl" asChild>
               <a
