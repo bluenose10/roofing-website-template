@@ -20,11 +20,11 @@ export function Header() {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-accent border-b border-accent">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a] border-b border-white/10">
       <nav className="container-wide flex items-center justify-between py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <span className="font-bold text-lg tracking-tight text-primary">Primer Group LTD</span>
+          <span className="font-bold text-lg tracking-tight text-accent">Primer Group LTD</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -35,8 +35,8 @@ export function Header() {
               to={item.href}
               className={`text-sm font-medium transition-colors ${
                 location.pathname === item.href
-                  ? "text-primary font-bold"
-                  : "text-primary/80 hover:text-primary"
+                  ? "text-accent"
+                  : "text-white/80 hover:text-white"
               }`}
             >
               {item.name}
@@ -46,7 +46,7 @@ export function Header() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:01704542122" className="flex items-center gap-2 text-primary/80 hover:text-primary transition-colors">
+          <a href="tel:01704542122" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
             <Phone className="w-4 h-4" />
             <span className="text-sm font-medium">Call Us</span>
           </a>
@@ -65,7 +65,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-primary p-2"
+          className="lg:hidden text-white p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
