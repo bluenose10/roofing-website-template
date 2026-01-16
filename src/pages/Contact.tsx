@@ -112,10 +112,10 @@ const Contact = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`group p-6 rounded-xl border transition-all hover:shadow-lg ${
+                className={`group p-6 rounded-xl border-2 transition-all hover:shadow-lg ${
                   method.highlight 
-                    ? "bg-[#25D366]/10 border-[#25D366]/30 hover:border-[#25D366]" 
-                    : "bg-card border-border hover:border-accent/50"
+                    ? "bg-transparent border-[#25D366]/50 hover:border-[#25D366]" 
+                    : "bg-transparent border-white/10 hover:border-[#F3CD45]"
                 }`}
               >
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${

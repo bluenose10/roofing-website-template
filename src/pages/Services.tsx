@@ -127,7 +127,7 @@ const Services = () => {
                 variants={itemVariants}
                 whileHover={{ scale: 1.01 }}
                 transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                className={`group relative bg-[#35383D] border-2 rounded-2xl overflow-hidden transition-all duration-300 ${
+                className={`group relative bg-transparent border-2 rounded-2xl overflow-hidden transition-all duration-300 ${
                   service.urgent 
                     ? "border-accent/60 hover:border-accent hover:shadow-xl hover:shadow-accent/20" 
                     : "border-border/60 hover:border-accent hover:shadow-xl hover:shadow-accent/10"
@@ -163,7 +163,7 @@ const Services = () => {
                         {service.features.map((feature) => (
                           <div 
                             key={feature} 
-                            className="flex items-center gap-3 bg-[#2A2D31] rounded-lg px-4 py-3 border border-white/10"
+                            className="flex items-center gap-3 bg-transparent rounded-lg px-4 py-3 border border-white/10"
                           >
                             <CheckCircle className="w-5 h-5 text-accent flex-shrink-0" />
                             <span className="text-foreground text-sm">{feature}</span>

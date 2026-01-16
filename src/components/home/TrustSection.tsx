@@ -75,7 +75,7 @@ export function TrustSection() {
               whileHover={{ y: -6, scale: 1.02 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, type: "spring", stiffness: 300, damping: 20 }}
-              className="group flex items-start gap-4 p-6 bg-[#35383D] border-2 border-white/10 rounded-2xl hover:border-[#F3CD45] hover:shadow-lg transition-all duration-300"
+              className="group flex items-start gap-4 p-6 bg-transparent border-2 border-white/10 rounded-2xl hover:border-[#F3CD45] hover:shadow-lg transition-all duration-300"
             >
               <div className="w-12 h-12 bg-accent/15 border border-accent/30 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent group-hover:glow-accent transition-all duration-300">
                 <feature.icon className="w-6 h-6 text-accent group-hover:text-primary-foreground transition-colors" />
@@ -95,7 +95,7 @@ export function TrustSection() {
           whileHover={{ scale: 1.01 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 300, damping: 25 }}
-          className="bg-[#35383D] border-2 border-[#F3CD45] rounded-3xl p-8 md:p-12 relative overflow-hidden"
+          className="bg-transparent border-2 border-[#F3CD45] rounded-3xl p-8 md:p-12 relative overflow-hidden"
         >
           
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
