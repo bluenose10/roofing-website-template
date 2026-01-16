@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 const WHATSAPP_NUMBER = "447000000000";
 const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
@@ -71,14 +71,6 @@ export function Footer() {
                   <span className="text-accent text-xs font-bold">8-6</span>
                 </div>
                 <span className="text-sm">Available 8:00am – 18:00</span>
-              </li>
-              <li>
-                <a href="mailto:info@primergroup.co.uk" className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors">
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
-                    <Mail className="w-4 h-4 text-accent" />
-                  </div>
-                  <span className="text-sm">info@primergroup.co.uk</span>
-                </a>
               </li>
             </ul>
           </div>
