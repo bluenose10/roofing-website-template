@@ -60,10 +60,10 @@ export function TrustSection() {
             Commercial Roof Installation Experts Southport
           </h2>
           <p className="text-lg text-muted-foreground mb-4">
-            If you're planning a new commercial construction in Southport and need a roof installation expert, we'd be glad to help. Our licensed team works with a variety of materials and would be happy to assist with your commercial roofing project.
+            Planning a new commercial build in Southport? Our licensed roof installation specialists are ready to deliver. We handle a wide range of roofing materials and take pride in bringing your commercial roofing vision to life.
           </p>
           <p className="text-lg text-muted-foreground">
-            As with any roofing project, our commercial roofing contractors start with a thorough consultation to ensure we're on the same page. We work closely with clients to design the roof, going through everything from picking materials to installing gutters.
+            Every project begins with an in-depth consultation where our commercial roofing contractors align with your goals. From material selection to gutter fitting, we collaborate closely to craft a roof that meets your exact specifications.
           </p>
         </motion.div>
 
