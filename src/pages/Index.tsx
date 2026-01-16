@@ -11,67 +11,62 @@ const Index = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map((faq) => ({
+    mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
+      name: faq.question,
+      acceptedAnswer: {
         "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+        text: faq.answer,
+      },
+    })),
   };
 
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    "name": "Commercial Roofing Merseyside",
-    "description": "Professional commercial and industrial roofing contractors serving Liverpool, Wirral, and the wider North West region. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
-    "url": "https://id-preview--c25d345b-d615-44dc-b942-f9f22213b38c.lovable.app",
-    "telephone": "+447838121592",
-    "areaServed": [
-      { "@type": "City", "name": "Liverpool" },
-      { "@type": "City", "name": "Wirral" },
-      { "@type": "City", "name": "St Helens" },
-      { "@type": "City", "name": "Knowsley" },
-      { "@type": "City", "name": "Sefton" },
-      { "@type": "AdministrativeArea", "name": "Greater Manchester" },
-      { "@type": "AdministrativeArea", "name": "Lancashire" },
-      { "@type": "AdministrativeArea", "name": "Cheshire" }
+    name: "Commercial Roofing Southport",
+    description:
+      "Professional commercial and industrial roofing contractors serving Liverpool, Wirral, and the wider North West region. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
+    url: "https://id-preview--c25d345b-d615-44dc-b942-f9f22213b38c.lovable.app",
+    telephone: "+447838121592",
+    areaServed: [
+      { "@type": "City", name: "Liverpool" },
+      { "@type": "City", name: "Wirral" },
+      { "@type": "City", name: "St Helens" },
+      { "@type": "City", name: "Knowsley" },
+      { "@type": "City", name: "Sefton" },
+      { "@type": "AdministrativeArea", name: "Greater Manchester" },
+      { "@type": "AdministrativeArea", name: "Lancashire" },
+      { "@type": "AdministrativeArea", name: "Cheshire" },
     ],
-    "serviceType": [
+    serviceType: [
       "Commercial Flat Roofing",
       "Industrial Roof Repairs",
       "Emergency Roofing Services",
       "Roof Maintenance",
       "EPDM Roofing",
       "TPO Roofing",
-      "GRP Fibreglass Roofing"
+      "GRP Fibreglass Roofing",
     ],
-    "priceRange": "£45-£120 per m²",
-    "openingHoursSpecification": {
+    priceRange: "£45-£120 per m²",
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "00:00",
-      "closes": "23:59"
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
     },
-    "aggregateRating": {
+    aggregateRating: {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "500"
-    }
+      ratingValue: "5",
+      reviewCount: "500",
+    },
   };
 
   return (
     <Layout>
       {/* Schema.org structured data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} />
 
       {/* Hidden Netlify form for detection */}
       <form hidden method="POST" name="contact" data-netlify="true">
@@ -82,7 +77,7 @@ const Index = () => {
         <input type="text" name="projectType" />
         <textarea name="message"></textarea>
       </form>
-      
+
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />
