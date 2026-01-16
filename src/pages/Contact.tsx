@@ -180,6 +180,8 @@ const Contact = () => {
                   onSubmit={handleSubmit}
                   className="space-y-5"
                   name="contact"
+                  method="POST"
+                  data-netlify="true"
                 >
                   <input type="hidden" name="form-name" value="contact" />
                   <div className="grid sm:grid-cols-2 gap-5">
