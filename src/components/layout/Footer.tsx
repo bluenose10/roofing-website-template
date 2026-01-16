@@ -28,14 +28,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center glow-accent">
-                <span className="text-primary font-bold text-xl">P</span>
-              </div>
-              <div>
-                <span className="font-bold text-lg tracking-tight">PRIMER GROUP</span>
-                <span className="block text-xs text-white/50 tracking-widest">LTD</span>
-              </div>
+            <div>
+              <span className="font-bold text-lg tracking-tight">PRIMER GROUP</span>
+              <span className="block text-xs text-white/50 tracking-widest">LTD</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               Southport's trusted commercial roofing specialists. Delivering precision 
