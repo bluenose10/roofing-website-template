@@ -12,28 +12,22 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Commercial roofing installation by Primer Group"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Commercial roofing southport" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         {/* Subtle grid overlay */}
-        <div className="absolute inset-0 opacity-10" style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
-
 
       {/* Content */}
       <div className="relative container-wide py-20 lg:py-32">
         <div className="max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-block px-4 py-2 glass-dark text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30">
               Commercial Roofers Southport
             </span>
@@ -45,8 +39,10 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] mb-6"
           >
-            PRECISION<br />
-            <span className="text-gradient">COMMERCIAL</span><br />
+            PRECISION
+            <br />
+            <span className="text-gradient">COMMERCIAL</span>
+            <br />
             ROOFING
           </motion.h1>
 
@@ -56,8 +52,8 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/70 mb-8 max-w-lg"
           >
-            Primer Group Ltd Southport's trusted commercial & industrial roofing specialists. 
-            Delivering exceptional quality and reliability across Merseyside for over 35 years.
+            Primer Group Ltd Southport's trusted commercial & industrial roofing specialists. Delivering exceptional
+            quality and reliability across Merseyside for over 35 years.
           </motion.p>
 
           <motion.div
