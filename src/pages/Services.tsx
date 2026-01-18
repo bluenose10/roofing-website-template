@@ -3,84 +3,11 @@ import { Layout } from "@/components/layout/Layout";
 import { CheckCircle, ArrowRight, MessageCircle, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-roofing.jpg";
+import { businessConfig } from "@/config/business";
+import { getServicesDetailed, getServiceTypeText } from "@/utils/serviceType";
 
-const WHATSAPP_NUMBER = "447838121592";
-
-const services = [
-  {
-    id: "industrial",
-    title: "Industrial Roof Installation",
-    description: "Complete roofing solutions for warehouses, factories, and large commercial buildings. We specialize in handling complex industrial projects of any scale.",
-    features: [
-      "Built-up roofing systems (BUR)",
-      "Standing seam metal roofing",
-      "Single-ply membrane systems",
-      "Green roofing options",
-    ],
-    timeline: "2-8 weeks",
-  },
-  {
-    id: "flat-roof",
-    title: "Commercial Flat Roofing",
-    description: "Expert flat roof systems designed for commercial buildings. We work with premium materials to ensure longevity and performance.",
-    features: [
-      "EPDM rubber roofing",
-      "TPO membrane systems",
-      "PVC roofing solutions",
-      "Modified bitumen",
-    ],
-    timeline: "1-4 weeks",
-  },
-  {
-    id: "repair",
-    title: "Roof Repair & Maintenance",
-    description: "Proactive maintenance programs and rapid repairs to extend your roof's lifespan and prevent costly damage.",
-    features: [
-      "Regular maintenance programs",
-      "Leak detection and repair",
-      "Flashing and seam repairs",
-      "Drainage improvements",
-    ],
-    timeline: "Same day - 1 week",
-  },
-  {
-    id: "emergency",
-    title: "Emergency Leak Response",
-    description: "24/7 emergency response for urgent roof leaks and storm damage. We're here when you need us most.",
-    features: [
-      "24/7 emergency callout",
-      "Rapid temporary repairs",
-      "Storm damage assessment",
-      "Insurance claim support",
-    ],
-    timeline: "2-4 hour response",
-    urgent: true,
-  },
-  {
-    id: "inspections",
-    title: "Roof Inspections & Surveys",
-    description: "Comprehensive roof assessments using the latest drone technology and thermal imaging to identify issues before they become problems.",
-    features: [
-      "Drone aerial surveys",
-      "Thermal imaging analysis",
-      "Core sampling and testing",
-      "Detailed condition reports",
-    ],
-    timeline: "1-3 days",
-  },
-  {
-    id: "gutters",
-    title: "Gutter & Drainage Systems",
-    description: "Professional gutter and drainage solutions for commercial properties. Proper water management is essential to protect your roof investment and building structure.",
-    features: [
-      "Commercial gutter installation",
-      "Drainage system design",
-      "Gutter cleaning & maintenance",
-      "Downspout installation & repair",
-    ],
-    timeline: "1-2 weeks",
-  },
-];
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
+const services = getServicesDetailed();
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -101,7 +28,7 @@ const Services = () => {
       {/* Hero */}
       <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
+          <img src={heroImage} alt={`${getServiceTypeText()} roofing services`} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         </div>
         
@@ -115,12 +42,11 @@ const Services = () => {
               Our Services
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Commercial Roofing <span className="text-gradient">Services</span>
+              {getServiceTypeText()} Roofing <span className="text-gradient">Services</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
-              From new installations to emergency repairs, we deliver comprehensive 
-              roofing solutions tailored to your commercial property needs across 
-              Southport and Merseyside.
+              From new installations to emergency repairs, we deliver comprehensive
+              roofing solutions tailored to your needs across {businessConfig.location.city} and {businessConfig.location.region}.
             </p>
           </motion.div>
         </div>

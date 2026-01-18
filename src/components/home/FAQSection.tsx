@@ -9,10 +9,11 @@ import {
 import { Button } from "@/components/ui/button";
 
 import { businessConfig } from "@/config/business";
+import { faqs } from "@/config/content";
 
 const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
 
-export { faqs } from "@/config/content";
+export { faqs };
 
 export const FAQSection = () => {
   const handleWhatsApp = () => {

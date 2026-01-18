@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { businessConfig } from "@/config/business";
+import { getServiceTypeText } from "@/utils/serviceType";
 
-const WHATSAPP_NUMBER = "447838121592";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
+const WHATSAPP_MESSAGE = encodeURIComponent(`Hi, I'd like a quote for ${getServiceTypeText().toLowerCase()} roofing`);
 
 export function WhatsAppFloat() {
   return (

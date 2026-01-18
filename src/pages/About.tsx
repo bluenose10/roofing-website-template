@@ -2,57 +2,28 @@ import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Target, Eye, Users, Award, Shield, Clock, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-roofing.jpg";
+import { businessConfig } from "@/config/business";
+import { aboutContent } from "@/config/content";
+import { getServiceTypeText } from "@/utils/serviceType";
 
-const timeline = [
-  {
-    year: "2009",
-    title: "Founded",
-    description: "Primer Group established in Southport with a vision for quality commercial roofing.",
-  },
-  {
-    year: "2012",
-    title: "First Major Contract",
-    description: "Secured our first large-scale industrial roofing project.",
-  },
-  {
-    year: "2016",
-    title: "Team Expansion",
-    description: "Grew to 20+ trained roofing specialists and invested in new equipment.",
-  },
-  {
-    year: "2019",
-    title: "Drone Technology",
-    description: "Introduced drone surveys and thermal imaging for advanced diagnostics.",
-  },
-  {
-    year: "2023",
-    title: "Industry Recognition",
-    description: "Received regional excellence award for commercial roofing services.",
-  },
-];
+const timeline = aboutContent.timeline;
 
-const values = [
-  {
-    icon: Target,
-    title: "Precision",
-    description: "Every project executed with meticulous attention to detail and exacting standards.",
-  },
-  {
-    icon: Shield,
-    title: "Safety First",
-    description: "Comprehensive safety protocols protecting our team and your property.",
-  },
-  {
-    icon: Clock,
-    title: "Reliability",
-    description: "On-time delivery and budget adherence you can depend on.",
-  },
-  {
-    icon: Eye,
-    title: "Transparency",
-    description: "Clear communication and honest pricing throughout every project.",
-  },
-];
+const valueIcons: Record<string, any> = {
+  "Quality Craftsmanship": Target,
+  "Precision": Target,
+  "Respect for Your Property": Shield,
+  "Safety First": Shield,
+  "Honest & Reliable": Clock,
+  "Reliability": Clock,
+  "Transparent Pricing": Eye,
+  "Transparency": Eye,
+};
+
+const values = aboutContent.values.map(value => ({
+  icon: valueIcons[value.title] || Target,
+  title: value.title,
+  description: value.description,
+}));
 
 const team = [
   { name: "Managing Director", role: "Leadership & Strategy", experience: "35+ years" },
@@ -67,7 +38,7 @@ const About = () => {
       {/* Hero */}
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Commercial roofing" className="w-full h-full object-cover" />
+          <img src={heroImage} alt={`${getServiceTypeText()} roofing specialists`} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         </div>
 
@@ -75,11 +46,10 @@ const About = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">About Us</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Built on Quality, <span className="text-gradient">Driven by Excellence</span>
+              {businessConfig.branding.tagline.replace('[Your Tagline]', 'Built on Quality, Driven by Excellence')}
             </h1>
             <p className="text-lg text-white/80">
-              Since 2009, Primer Group has been Southport's trusted commercial roofing specialists, delivering precision
-              workmanship across Merseyside.
+              Professional {getServiceTypeText().toLowerCase()} roofing specialists serving {businessConfig.location.city} and {businessConfig.location.region} since {businessConfig.foundingYear}.
             </p>
           </motion.div>
         </div>
@@ -100,8 +70,7 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To provide exceptional commercial roofing solutions that protect businesses, enhance building value, and
-                exceed client expectations through skilled craftsmanship and innovative approaches.
+                To provide exceptional {getServiceTypeText().toLowerCase()} roofing solutions that protect your property, enhance value, and exceed expectations through skilled craftsmanship and reliable service.
               </p>
             </motion.div>
 
@@ -116,8 +85,7 @@ const About = () => {
               </div>
               <h2 className="text-2xl font-bold text-foreground mb-4">Our Vision</h2>
               <p className="text-muted-foreground leading-relaxed">
-                To be recognized as Northern England's premier commercial roofing contractor, setting industry standards
-                for quality, innovation, and customer service excellence.
+                To be {businessConfig.location.region}'s most trusted {getServiceTypeText().toLowerCase()} roofing specialists, setting the standard for quality workmanship and customer satisfaction.
               </p>
             </motion.div>
           </div>
@@ -258,7 +226,7 @@ const About = () => {
                 </div>
               </div>
               <div className="flex flex-wrap justify-center gap-4">
-                {["NFRC Member", "CSCS Certified", "Safe Contractor", "CompetentRoofer"].map((cert) => (
+                {aboutContent.certifications.map((cert) => (
                   <div
                     key={cert}
                     className="flex items-center gap-2 px-4 py-2 bg-muted border border-border rounded-lg"

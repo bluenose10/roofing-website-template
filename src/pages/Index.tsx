@@ -7,8 +7,11 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection, faqs } from "@/components/home/FAQSection";
 import { CTASection } from "@/components/home/CTASection";
 import { businessConfig } from "@/config/business";
+import { getServicesDetailed } from "@/utils/serviceType";
 
 const Index = () => {
+  const detailedServices = getServicesDetailed();
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -58,50 +61,19 @@ const Index = () => {
       { "@type": "AdministrativeArea", name: "Lancashire" },
       { "@type": "AdministrativeArea", name: "Cheshire" },
     ],
-    serviceType: [
-      "Commercial Roofing",
-      "Industrial Roofing",
-      "Commercial Flat Roofing",
-      "Industrial Roof Repairs",
-      "Emergency Roofing Services",
-      "Roof Maintenance",
-      "Roof Inspections",
-      "EPDM Roofing",
-      "TPO Roofing",
-      "GRP Fibreglass Roofing",
-      "Roof Replacement",
-      "Flat Roof Installation",
-    ],
+    serviceType: detailedServices.map(service => service.title),
     priceRange: "££",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Roofing Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Commercial Flat Roofing",
-            description: "Professional flat roofing installation and repair for commercial properties",
-          },
+      itemListElement: detailedServices.slice(0, 3).map(service => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.description,
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Emergency Roof Repairs",
-            description: "24/7 emergency roofing repair services across Merseyside",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Roof Inspections",
-            description: "Comprehensive roof inspection and maintenance services",
-          },
-        },
-      ],
+      })),
     },
     openingHoursSpecification: [
       {

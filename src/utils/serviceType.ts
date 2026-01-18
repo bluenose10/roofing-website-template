@@ -5,7 +5,7 @@
  */
 
 import { businessConfig } from '@/config/business';
-import { commercialServices, residentialServices } from '@/config/content';
+import { commercialServices, residentialServices, commercialServicesDetailed, residentialServicesDetailed } from '@/config/content';
 
 /**
  * Check if the business is commercial roofing
@@ -52,4 +52,11 @@ export const getBuildingType = () => {
  */
 export const getClientType = () => {
   return isCommercial() ? 'businesses' : 'homeowners';
+};
+
+/**
+ * Get the detailed services array for Services page based on service type
+ */
+export const getServicesDetailed = () => {
+  return isCommercial() ? commercialServicesDetailed : residentialServicesDetailed;
 };

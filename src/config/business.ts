@@ -1,52 +1,52 @@
 /**
- * Business Configuration
+ * Business Configuration Template
  *
- * This file contains all business-specific information that should be customized
- * when cloning this template for a new roofing company.
+ * This is a TEMPLATE configuration file for a roofing company website.
+ * All values in square brackets [ ] should be replaced with your actual business details.
  *
- * TO CUSTOMIZE: Update all values in this file with your business details.
+ * TO CUSTOMIZE: Replace all placeholder text with your company information.
  */
 
 export const businessConfig = {
   // Business Identity
-  name: "Primer Group",
-  legalName: "Primer Group Limited",
-  alternateName: "Primer Group LTD",
+  name: "[Your Business Name]",
+  legalName: "[Your Business Name] Ltd",
+  alternateName: "[Your Company]",
 
   // Service Type: "commercial" or "residential"
-  serviceType: "commercial" as "commercial" | "residential",
+  serviceType: "residential" as "commercial" | "residential",
 
   // Location Details
   location: {
-    city: "Southport",
-    region: "Merseyside",
-    streetAddress: "147 Hampton Road",
-    postalCode: "PR8 5DJ",
+    city: "[Your City]",
+    region: "[Your Region]",
+    streetAddress: "[Your Street Address]",
+    postalCode: "[Your Postcode]",
     country: "GB",
     countryName: "United Kingdom",
     coordinates: {
-      latitude: "53.6476",
-      longitude: "-3.0069"
+      latitude: "51.5074",  // London coordinates as placeholder
+      longitude: "-0.1278"
     },
     // Service area description
-    serviceArea: "Southport and Merseyside",
-    serviceRadius: "50-mile radius of Liverpool"
+    serviceArea: "[Your City] and surrounding areas",
+    serviceRadius: "30-mile radius"
   },
 
   // Contact Information
   contact: {
-    phone: "01704542122",
-    phoneDisplay: "01704 542 122",
-    mobile: "07838121592",
-    mobileDisplay: "07838 121 592",
-    whatsapp: "447838121592", // Include country code, no + or spaces
-    email: "info@primergroup.co.uk"
+    phone: "01234567890",
+    phoneDisplay: "01234 567 890",
+    mobile: "07700900123",
+    mobileDisplay: "07700 900 123",
+    whatsapp: "447700900123", // Include country code, no + or spaces
+    email: "info@yourcompany.co.uk"
   },
 
   // Website & Social Media
   website: {
-    url: "https://primergroup.co.uk",
-    domain: "primergroup.co.uk"
+    url: "https://yourcompany.co.uk",
+    domain: "yourcompany.co.uk"
   },
 
   social: {
@@ -58,13 +58,13 @@ export const businessConfig = {
 
   // Branding
   branding: {
-    tagline: "Built on Quality, Driven by Excellence",
+    tagline: "[Your Tagline]",
     primaryColor: "gold", // matches Tailwind accent color
-    logoText: "Primer Group Ltd" // Text shown in header logo
+    logoText: "[Your Business Name]" // Text shown in header logo
   },
 
   // Company Details
-  foundingYear: 2009,
+  foundingYear: 2010,
   emergencyResponseTime: "2-4 hour emergency response",
 
   // Operating Hours (for schema.org)
@@ -75,10 +75,10 @@ export const businessConfig = {
   ],
 
   // Business Description (for SEO)
-  description: "Professional commercial roofing solutions for businesses across Southport and Merseyside. Expert installation, maintenance, and emergency repair services.",
+  description: "Professional residential roofing services for homeowners. Expert roof installations, repairs, and maintenance for homes across [Your Area].",
 
   // Keywords for SEO
-  keywords: "commercial roofers Southport, industrial roofing Merseyside, flat roof repair Southport, commercial roofing contractors, roof installation",
+  keywords: "residential roofers, home roofing, roof replacement, roof repairs, new roof installation, [your city] roofers, roofing contractors",
 } as const;
 
 // Type exports for TypeScript
