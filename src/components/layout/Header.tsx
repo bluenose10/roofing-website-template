@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { businessConfig } from "@/config/business";
+import { getServiceTypeText } from "@/utils/serviceType";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -12,8 +14,8 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-const WHATSAPP_NUMBER = "447838121592";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
+const WHATSAPP_MESSAGE = encodeURIComponent(`Hi, I'd like a quote for ${getServiceTypeText().toLowerCase()} roofing`);
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,7 +26,7 @@ export function Header() {
       <nav className="container-wide flex items-center justify-between py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <span className="font-bold text-lg tracking-tight text-accent">Primer Group Ltd</span>
+          <span className="font-bold text-lg tracking-tight text-accent">{businessConfig.branding.logoText}</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -45,7 +47,7 @@ export function Header() {
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="tel:01704542122"
+            href={`tel:${businessConfig.contact.phone}`}
             className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
           ></a>
           <Button variant="whatsapp" size="default" asChild>

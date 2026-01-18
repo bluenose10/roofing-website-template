@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import heroImage from "@/assets/hero-roofing.jpg";
+import { businessConfig } from "@/config/business";
+import { getServiceTypeText } from "@/utils/serviceType";
 
-const WHATSAPP_NUMBER = "447838121592";
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
 
 const contactMethods = [
   {
@@ -16,15 +18,15 @@ const contactMethods = [
     title: "WhatsApp",
     description: "Fastest response - usually within minutes",
     value: "Chat Now",
-    href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hi, I'd like a quote for commercial roofing")}`,
+    href: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi, I'd like a quote for ${getServiceTypeText().toLowerCase()} roofing`)}`,
     highlight: true,
   },
   {
     icon: Phone,
     title: "Phone",
     description: "Speak directly with our team",
-    value: "01704 542122",
-    href: "tel:01704542122",
+    value: businessConfig.contact.phoneDisplay,
+    href: `tel:${businessConfig.contact.phone}`,
     highlight: false,
   },
 ];
@@ -311,8 +313,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground">Address</h3>
                     <p className="text-muted-foreground">
-                      147 Hampton Road, Southport,<br />
-                      Merseyside, PR8 5DJ
+                      {businessConfig.location.streetAddress}, {businessConfig.location.city},<br />
+                      {businessConfig.location.region}, {businessConfig.location.postalCode}
                     </p>
                   </div>
                 </div>

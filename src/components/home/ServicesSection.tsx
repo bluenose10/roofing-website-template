@@ -1,51 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Building2, Wrench, AlertTriangle, Search, Layers, Droplets } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { businessConfig } from "@/config/business";
+import { servicesContent } from "@/config/content";
+import { getServices } from "@/utils/serviceType";
 
-const services = [
-  {
-    number: "01",
-    icon: Building2,
-    title: "Industrial Roof Installation",
-    description: "Complete roofing solutions for warehouses, factories, and large commercial buildings.",
-    href: "/services#industrial",
-  },
-  {
-    number: "02",
-    icon: Layers,
-    title: "Commercial Flat Roofing",
-    description: "Expert flat roof systems including single-ply membranes, built-up, and modified bitumen.",
-    href: "/services#flat-roof",
-  },
-  {
-    number: "03",
-    icon: Wrench,
-    title: "Roof Repair & Maintenance",
-    description: "Proactive maintenance programs and rapid repairs to extend your roof's lifespan.",
-    href: "/services#repair",
-  },
-  {
-    number: "04",
-    icon: AlertTriangle,
-    title: "Emergency Leak Response",
-    description: "24/7 emergency response for urgent roof leaks and storm damage repair.",
-    href: "/services#emergency",
-  },
-  {
-    number: "05",
-    icon: Search,
-    title: "Roof Inspections & Surveys",
-    description: "Comprehensive roof assessments using drone technology and thermal imaging.",
-    href: "/services#inspections",
-  },
-  {
-    number: "06",
-    icon: Droplets,
-    title: "Gutter & Drainage Systems",
-    description: "Commercial gutter installation, drainage solutions, and preventative maintenance.",
-    href: "/services#gutters",
-  },
-];
+const services = getServices();
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -75,13 +35,13 @@ export function ServicesSection() {
           className="text-center max-w-4xl mx-auto mb-16"
         >
           <span className="text-accent font-semibold text-sm tracking-wider uppercase mb-4 block">
-            Commercial & Industrial Roofers Southport
+            {servicesContent.badge.replace('Southport', businessConfig.location.city)}
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our Commercial Roofing Services
+            {servicesContent.headline}
           </h2>
           <p className="text-xl text-muted-foreground">
-            Primer Group LTD delivers comprehensive commercial and industrial roofing solutions across Southport, Liverpool, and Manchester. From new installations to emergency repairs and gutter systems, our expert contractors protect your investment with quality workmanship and reliable service.
+            {servicesContent.description.replace('Primer Group LTD', businessConfig.name).replace('Southport', businessConfig.location.city)}
           </p>
         </motion.div>
 

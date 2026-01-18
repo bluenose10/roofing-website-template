@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone } from "lucide-react";
-
-const WHATSAPP_NUMBER = "447000000000";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
+import { businessConfig } from "@/config/business";
+import { getServiceTypeText } from "@/utils/serviceType";
 
 const company = [
   { name: "About Us", href: "/about" },
@@ -40,31 +39,31 @@ export function Footer() {
                   <MapPin className="w-4 h-4 text-accent" />
                 </div>
                 <span className="text-white/60 text-sm">
-                  147 Hampton Road, Southport,
+                  {businessConfig.location.streetAddress}, {businessConfig.location.city},
                   <br />
-                  Merseyside, PR8 5DJ
+                  {businessConfig.location.region}, {businessConfig.location.postalCode}
                 </span>
               </li>
               <li>
                 <a
-                  href="tel:01704542122"
+                  href={`tel:${businessConfig.contact.phone}`}
                   className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors"
                 >
                   <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
                     <Phone className="w-4 h-4 text-accent" />
                   </div>
-                  <span className="text-sm">01704 542122</span>
+                  <span className="text-sm">{businessConfig.contact.phoneDisplay}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:07838121592"
+                  href={`tel:${businessConfig.contact.mobile}`}
                   className="flex items-center gap-3 text-white/60 hover:text-accent transition-colors"
                 >
                   <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center">
                     <Phone className="w-4 h-4 text-accent" />
                   </div>
-                  <span className="text-sm">Mob: 07838 121592</span>
+                  <span className="text-sm">Mob: {businessConfig.contact.mobileDisplay}</span>
                 </a>
               </li>
               <li className="flex items-center gap-3 text-white/60">
@@ -79,8 +78,8 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">© {new Date().getFullYear()} Primer Group LTD. All rights reserved.</p>
-          <p className="text-white/40 text-sm">Commercial Roofers Southport</p>
+          <p className="text-white/40 text-sm">© {new Date().getFullYear()} {businessConfig.alternateName}. All rights reserved.</p>
+          <p className="text-white/40 text-sm">{getServiceTypeText()} Roofers {businessConfig.location.city}</p>
         </div>
       </div>
     </footer>

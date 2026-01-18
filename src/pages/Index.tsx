@@ -6,6 +6,7 @@ import { TrustSection } from "@/components/home/TrustSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection, faqs } from "@/components/home/FAQSection";
 import { CTASection } from "@/components/home/CTASection";
+import { businessConfig } from "@/config/business";
 
 const Index = () => {
   const faqSchema = {
@@ -24,27 +25,26 @@ const Index = () => {
   const businessSchema = {
     "@context": "https://schema.org",
     "@type": "RoofingContractor",
-    "@id": "https://primergroup.co.uk/#organization",
-    name: "Primer Group LTD",
-    alternateName: "Primer Group",
-    legalName: "Primer Group Limited",
-    description:
-      "Commercial and industrial roofing contractors serving Southport and Merseyside. Specialists in flat roofing, emergency repairs, and complete roof replacements.",
-    url: "https://primergroup.co.uk",
-    telephone: "+447838121592",
-    email: "info@primergroup.co.uk",
+    "@id": `${businessConfig.website.url}/#organization`,
+    name: businessConfig.name,
+    alternateName: businessConfig.alternateName,
+    legalName: businessConfig.legalName,
+    description: businessConfig.description,
+    url: businessConfig.website.url,
+    telephone: `+${businessConfig.contact.whatsapp}`,
+    email: businessConfig.contact.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "147 Hampton Road",
-      addressLocality: "Southport",
-      addressRegion: "Merseyside",
-      postalCode: "PR8 5DJ",
-      addressCountry: "GB",
+      streetAddress: businessConfig.location.streetAddress,
+      addressLocality: businessConfig.location.city,
+      addressRegion: businessConfig.location.region,
+      postalCode: businessConfig.location.postalCode,
+      addressCountry: businessConfig.location.country,
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "53.6476",
-      longitude: "-3.0069",
+      latitude: businessConfig.location.coordinates.latitude,
+      longitude: businessConfig.location.coordinates.longitude,
     },
     areaServed: [
       { "@type": "City", name: "Southport", "@id": "https://en.wikipedia.org/wiki/Southport" },
@@ -124,8 +124,8 @@ const Index = () => {
       worstRating: "1",
       reviewCount: "500",
     },
-    foundingDate: "1989",
-    slogan: "Precision Commercial Roofing",
+    foundingDate: businessConfig.foundingYear.toString(),
+    slogan: businessConfig.branding.tagline,
     knowsAbout: [
       "Commercial Roofing",
       "Industrial Roofing",

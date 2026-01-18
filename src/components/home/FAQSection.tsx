@@ -8,42 +8,11 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 
-const WHATSAPP_NUMBER = "447838121592";
+import { businessConfig } from "@/config/business";
 
-export const faqs = [
-  {
-    question: "What types of commercial roofing systems do you install?",
-    answer: "We specialise in flat roofing systems including EPDM rubber, TPO, PVC single-ply membranes, built-up felt roofing, GRP fibreglass, and liquid-applied waterproofing. We also install metal roofing, composite panels, and green roof systems for commercial and industrial properties."
-  },
-  {
-    question: "How long does a commercial roof installation take?",
-    answer: "Project timelines vary based on roof size and complexity. A typical 500m² flat roof replacement takes 1-2 weeks, while larger industrial projects may take 3-4 weeks. We provide detailed schedules upfront and work efficiently to minimise disruption to your operations."
-  },
-  {
-    question: "Do you offer emergency roof repair services?",
-    answer: "Yes, we provide 24/7 emergency response across Merseyside and the North West. Our rapid response team can typically attend within 2-4 hours for urgent leaks, storm damage, or structural concerns. Call us immediately if you have an emergency."
-  },
-  {
-    question: "What areas do you cover in the North West?",
-    answer: "We cover the entire Merseyside region including Liverpool, Wirral, St Helens, Knowsley, and Sefton. We also serve Greater Manchester, Lancashire, Cheshire, and surrounding areas within a 50-mile radius of Liverpool."
-  },
-  {
-    question: "How often should a commercial roof be inspected?",
-    answer: "We recommend professional inspections twice yearly—spring and autumn—plus after severe weather events. Regular inspections identify minor issues before they become costly repairs. We offer maintenance contracts with scheduled inspections and priority response."
-  },
-  {
-    question: "What warranties do you offer on roofing work?",
-    answer: "All our installations come with comprehensive warranties. Workmanship is guaranteed for 10-20 years depending on the system, and material warranties from manufacturers range from 15-30 years. We're fully insured and stand behind every project we complete."
-  },
-  {
-    question: "Can you work on occupied buildings without disrupting operations?",
-    answer: "Absolutely. We regularly work on occupied offices, warehouses, retail units, and industrial facilities. We plan around your business hours, use quiet working methods where needed, and maintain strict health and safety protocols to ensure minimal disruption."
-  },
-  {
-    question: "What is the cost of a new commercial roof?",
-    answer: "Costs depend on roof size, chosen system, access requirements, and existing roof condition. As a guide, commercial flat roofing typically ranges from £45-£120 per m². We provide free, no-obligation surveys and detailed quotes with transparent pricing—no hidden costs."
-  }
-];
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
+
+export { faqs } from "@/config/content";
 
 export const FAQSection = () => {
   const handleWhatsApp = () => {

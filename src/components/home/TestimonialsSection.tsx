@@ -1,40 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "David Thompson",
-    role: "Warehouse Manager",
-    company: "Thompson Logistics, Southport",
-    content:
-      "Primer Group replaced the entire roof on our 50,000 sq ft warehouse. Professional team, minimal disruption to our operations, and completed ahead of schedule. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "Sarah Mitchell",
-    role: "Property Director",
-    company: "Merseyside Retail Holdings",
-    content:
-      "We've used Primer Group for all our commercial properties across Merseyside for the past 8 years. Their maintenance program has saved us thousands in potential repairs.",
-    rating: 5,
-  },
-  {
-    name: "James O'Connor",
-    role: "Factory Owner",
-    company: "O'Connor Manufacturing, Liverpool",
-    content:
-      "Emergency leak on a Sunday morning - Primer Group had a team on-site within 2 hours. Temporary fix done same day, permanent repair completed that week. Exceptional service.",
-    rating: 5,
-  },
-  {
-    name: "Helen Price",
-    role: "Facilities Manager",
-    company: "North West Healthcare Trust",
-    content:
-      "Primer Group handled our hospital roof refurbishment with incredible attention to safety and cleanliness. Their team understood the sensitive nature of our environment.",
-    rating: 5,
-  },
-];
+import { testimonials } from "@/config/content";
 
 const containerVariants = {
   hidden: { opacity: 0 },

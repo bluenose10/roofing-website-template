@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-roofing.jpg";
 import { useRef } from "react";
+import { businessConfig } from "@/config/business";
+import { heroContent } from "@/config/content";
+import { getServiceTypeText } from "@/utils/serviceType";
 
-const WHATSAPP_NUMBER = "447838121592";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
+const WHATSAPP_MESSAGE = encodeURIComponent(`Hi, I'd like a quote for ${getServiceTypeText().toLowerCase()} roofing`);
 
 export function HeroSection() {
   const sectionRef = useRef(null);
@@ -26,7 +29,7 @@ export function HeroSection() {
         className="absolute inset-0"
         style={{ y: imageY }}
       >
-        <img src={heroImage} alt="Commercial roofing southport" className="w-full h-full object-cover scale-110" />
+        <img src={heroImage} alt={`${getServiceTypeText()} roofing ${businessConfig.location.city.toLowerCase()}`} className="w-full h-full object-cover scale-110" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/50" />
         {/* Subtle grid overlay */}
         <div
@@ -46,7 +49,7 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-block px-4 py-2 glass-dark text-accent rounded-full text-sm font-semibold mb-6 border border-accent/30">
-              Commercial Roofers Southport
+              {getServiceTypeText()} Roofers {businessConfig.location.city}
             </span>
           </motion.div>
 
@@ -56,9 +59,9 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] mb-6"
           >
-            PRIMER GROUP
+            {heroContent.headlines[1].toUpperCase()}
             <br />
-            <span className="text-gradient">COMMERCIAL</span>
+            <span className="text-gradient">{getServiceTypeText().toUpperCase()}</span>
             <br />
             ROOFING
           </motion.h1>
@@ -69,8 +72,7 @@ export function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto"
           >
-            Primer Group Ltd Southport's trusted commercial & industrial roofing specialists. Delivering exceptional
-            quality and reliability across Merseyside for over 35 years.
+            {heroContent.description.replace('Primer Group LTD', businessConfig.name).replace('Southport', businessConfig.location.city)}
           </motion.p>
 
           <motion.div

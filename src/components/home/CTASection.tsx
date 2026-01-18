@@ -2,9 +2,11 @@ import { motion } from "framer-motion";
 import { MessageCircle, Phone, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { businessConfig } from "@/config/business";
+import { getServiceTypeText } from "@/utils/serviceType";
 
-const WHATSAPP_NUMBER = "447838121592";
-const WHATSAPP_MESSAGE = encodeURIComponent("Hi, I'd like a quote for commercial roofing");
+const WHATSAPP_NUMBER = businessConfig.contact.whatsapp;
+const WHATSAPP_MESSAGE = encodeURIComponent(`Hi, I'd like a quote for ${getServiceTypeText().toLowerCase()} roofing`);
 
 export function CTASection() {
   return (
@@ -27,8 +29,8 @@ export function CTASection() {
             Ready to Start Your <span className="text-gradient">Project?</span>
           </h2>
           <p className="text-lg text-primary-foreground/70 mb-10">
-            Get a free, no-obligation quote within 24 hours. Our team is ready 
-            to discuss your commercial roofing needs.
+            Get a free, no-obligation quote within 24 hours. Our team is ready
+            to discuss your {getServiceTypeText().toLowerCase()} roofing needs.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -59,9 +61,9 @@ export function CTASection() {
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-6">
-            <a href="tel:01704542122" className="flex items-center gap-2 text-primary-foreground/70 hover:text-accent transition-colors">
+            <a href={`tel:${businessConfig.contact.phone}`} className="flex items-center gap-2 text-primary-foreground/70 hover:text-accent transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">Or call: 01704 542122</span>
+              <span className="text-sm font-medium">Or call: {businessConfig.contact.phoneDisplay}</span>
             </a>
           </div>
         </motion.div>
